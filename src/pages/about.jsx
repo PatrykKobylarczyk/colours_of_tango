@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 //LIBS'
 import { motion } from "framer-motion";
 
 //COMPONENTS
-import AboutDuoContent from "../components/AboutDuoContent";
+import AboutColoursContent from "../components/AboutColoursContent";
 import AboutAnetaContent from "../components/AboutAnetaContent";
 import AboutKonradContent from "../components/AboutKonradContent";
+import AboutOscarContent from "../components/AboutOscarContent";
 import Head from "../components/Head";
 
 // HOOKS
@@ -28,6 +29,7 @@ const About = () => {
   const [showMoreDuo, setShowMoreDuo] = useState(false);
   const [showMoreAneta, setShowMoreAneta] = useState(false);
   const [showMoreKonrad, setShowMoreKonrad] = useState(false);
+  const [showMoreOscar, setShowMoreOscar] = useState(false);
 
   const lang = language === "PL" ? lang_EN : lang_PL;
 
@@ -42,11 +44,13 @@ const About = () => {
       case "konrad":
         setShowMoreKonrad((prev) => !prev);
         break;
+      case "oscar":
+        setShowMoreOscar((prev) => !prev);
+        break;
       default:
         console.log("Opps");
     }
   };
-
 
   return (
     <div className="w-full relative page">
@@ -55,10 +59,10 @@ const About = () => {
       {/* BACKGROUND  */}
       <div className="fixed overflow-hidden top-0 right-0 w-full">
         <StaticImage
-          src="../assets/images/03-_B2A4045-1popr.jpg"
+          src="../assets/pictures/6296.jpg"
           alt="main room"
           className="fixed w-full h-screen -z-[2]"
-          objectPosition={`${isAboveMediumScreens ? "0% bottom" : "47% 0%"}`}
+          // objectPosition={`${isAboveMediumScreens ? "0% bottom" : "47% 0%"}`}
         />
 
         <motion.div
@@ -76,15 +80,40 @@ const About = () => {
         </h1>
         <p>{lang.about_description_paragraph1}</p>
         {isAboveMediumScreens ? (
-          <AboutDuoContent lang={lang} />
+          <AboutColoursContent lang={lang} />
         ) : (
-          showMoreDuo && <AboutDuoContent lang={lang} />
+          showMoreDuo && <AboutColoursContent lang={lang} />
         )}
         {!isAboveMediumScreens && (
           <button className="mt-5" onClick={() => handleShowMore("duo")}>
             {showMoreDuo ? lang.about_less : lang.about_more}
           </button>
         )}
+
+        {/* Oscar */}
+        <div className="mt-20 lg:mt-40">
+          <div className="flex flex-col md:flex-row items-end w-full gap-5">
+            <StaticImage
+              src="../assets/pictures/6513.jpg"
+              alt="main room"
+              className="w-full md:w-1/2 brightness-110"
+            />
+            <h1 className="w-full md:w-1/2 text-2xl md:text-4xl font-bold md:text-left">
+              {lang.about_oscar_name}
+            </h1>
+          </div>
+          <p className="mt-10 lg:mt-10">{lang.about_oscar_paragraph1}</p>
+          {isAboveMediumScreens ? (
+            <AboutOscarContent lang={lang} />
+          ) : (
+            showMoreOscar && <AboutOscarContent lang={lang} />
+          )}
+          {!isAboveMediumScreens && (
+            <button className="mt-5" onClick={() => handleShowMore("oscar")}>
+              {showMoreOscar ? lang.about_less : lang.about_more}
+            </button>
+          )}
+        </div>
 
         {/* Aneta */}
         <div className="mt-20 lg:mt-40">
@@ -93,7 +122,7 @@ const About = () => {
               {lang.about_aneta_name}
             </h1>
             <StaticImage
-              src="../assets/images/Aneta.jpg"
+              src="../assets/pictures/6326.jpg"
               alt="main room"
               className="w-full md:w-1/2 brightness-110"
             />
@@ -120,7 +149,7 @@ const About = () => {
               </h1>
             )}
             <StaticImage
-              src="../assets/images/Konrad.jpg"
+              src="../assets/pictures/6437.jpg"
               alt="main room"
               className="w-full md:w-1/2"
             />
