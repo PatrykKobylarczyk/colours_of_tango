@@ -37,7 +37,7 @@ const Contact = () => {
         ></motion.div>
         )
         <StaticImage
-          src="../assets/images/Kontakt.jpg"
+          src="../assets/pictures/6142.jpg"
           alt="main room"
           className="fixed top-0 left-0 h-screen"
           objectPosition="63% 0"

@@ -20,7 +20,7 @@ const Music = () => {
     <div className="pages relative page h-screen ">
       <Loader />
       <StaticImage
-        src="../assets/images/10-_B2A3749-1sin.jpg"
+        src="../assets/pictures/6641.jpg"
         alt="main room"
         className="h-screen fixed left-0 top-0 -z-[2]"
         objectPosition=" 75% 0"
