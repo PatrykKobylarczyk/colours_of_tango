@@ -9,21 +9,21 @@ const SocialMedia = () => {
   return (
     <div className="flex gap-4 items-center">
       <a
-        href="https://www.facebook.com/search/top?q=duo%20milonga"
+        href="https://www.facebook.com/coloursoftango"
         target="_blank"
         rel="noreferrer"
       >
         <FaFacebookF className="w-4 h-4 transition duration-200 hover:text-red hover:-translate-y-1" />
       </a>
       <a
-        href="https://www.instagram.com/duo.milonga/"
+        href="https://www.instagram.com/coloursoftango/"
         target="_blank"
         rel="noreferrer"
       >
         <BsInstagram className="w-4 h-4 transition duration-200 hover:text-red hover:-translate-y-1" />
       </a>
       <a
-        href="https://soundcloud.com/duomilonga?fbclid=IwAR1W4-oGThjv5_SctemkAKcMFE-QUwHE0RYkjSMMzQH4VCv3xsOw5ffqLS4"
+        href="https://soundcloud.com/coloursoftango"
         target="_blank"
         rel="noreferrer"
       >

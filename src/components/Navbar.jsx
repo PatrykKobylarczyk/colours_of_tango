@@ -44,7 +44,8 @@ const Navbar = () => {
   return (
     <div className="relative">
       <header>
-        <Logo color="white" />
+        <Logo/>
+      
 
         {/* DESKTOP NAV */}
         {isAboveMediumScreens ? (

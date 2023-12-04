@@ -20,18 +20,37 @@ const IndexPage = () => {
   const [language] = useRecoilState(languageState);
 
   //Titles Animation
-  const milonga = ["D", "u", "o", "\u00A0 ", "M", "i", "l", "o", "n", "g", "a"];
+  const milonga = [
+    "C",
+    "o",
+    "l",
+    "o",
+    "u",
+    "r",
+    "s",
+    "\u00A0 ",
+    "o",
+    "f",
+    "\u00A0 ",
+    "T",
+    "a",
+    "n",
+    "g",
+    "o",
+  ];
 
   const harp_en = `Aneta Salwińska - harp`;
   const harp_pl = `Aneta Salwińska - harfa`;
   const accordion_en = `Konrad Salwiński - accordion`;
   const accordion_pl = `Konrad Salwiński - akordeon`;
+  const vocal_en = `Oscar Ernesto Ovejero - vocal`;
+  const vocal_pl = `Oscar Ernesto Ovejero - wokal`;
 
   const harp = language === "PL" ? harp_en : harp_pl;
   const accordion = language === "PL" ? accordion_en : accordion_pl;
+  const vocal = language === "PL" ? vocal_en : vocal_pl;
   const contactUs = language === "PL" ? "Contact" : "Kontakt";
 
-  
   const container = {
     hidden: {},
     visible: {
@@ -54,15 +73,14 @@ const IndexPage = () => {
       <Loader />
       <main>
         {isAboveSmallScreens ? (
-          <StaticImage
-            src="../assets/images/06-_B2A3836-1popr.jpg"
-            alt="main room"
-            className=" h-full -z-50"
-            objectPosition="32% 30%"
-          />
+            <StaticImage
+              src="../assets/pictures/6762.jpg"
+              alt="colours of tango "
+              className=" h-full -z-50 brightness-[85%]"
+            />
         ) : (
           <StaticImage
-            src="../assets/images/Bez nazwy-1.jpg"
+            src="../assets/pictures/6762m.jpg"
             alt="main room"
             className="h-full -z-50"
             objectFit="cover"
@@ -107,9 +125,18 @@ const IndexPage = () => {
         >
           {accordion}
         </motion.div>
+        <motion.div
+          className="flex text-xs md:text-xl"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 3 }}
+        >
+          {vocal}
+        </motion.div>
 
         <motion.button
-          className="w-28 md:w-40 border-[1px] border-white rounded-full font-semibold text-xs md:text-sm h-8 md:h-20 mt-3 hover:border-red hover:bg-red transition duration-200"
+          className="w-28 md:w-40 border-[1px] border-white rounded-full font-semibold text-xs md:text-sm h-8 py-2 md:h-20 mt-3 hover:border-[#d50006] hover:bg-[#d50006] transition duration-200"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 2.8 }}
