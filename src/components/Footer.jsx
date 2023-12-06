@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 // HOOKS
 import useMediaQuery from "../hooks/useMediaQuery";
@@ -66,7 +66,7 @@ const Footer = () => {
           <SocialMedia />
           {isAboveSmallScreens ? null : (
             <p className="text-[10px] font-light mt-5 mb-0">
-              © 2023 Duo Milonga
+              © 2023 Colours of Tango
             </p>
           )}
         </div>
@@ -91,7 +91,7 @@ const Footer = () => {
       </div>
       {isAboveSmallScreens ? (
         <p className="text-[10px] font-light mt-5 mb-0">
-          © 2023 Duo Milonga
+          © 2023 Colours of Tango
         </p>
       ) : null}
     </footer>

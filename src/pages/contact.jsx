@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 // LIBS
@@ -22,11 +22,10 @@ const Contact = () => {
   const [language] = useRecoilState(languageState);
   const [isContactForm, setIsContactForm] = useState(false);
   const lang = language === "PL" ? lang_EN : lang_PL;
-  
 
   return (
     <div className="page pages relative h-screen flex flex-col justify-center overflow-hidden">
-      <Loader/>
+      <Loader />
       <div>
         (
         <motion.div
@@ -60,7 +59,7 @@ const Contact = () => {
                     <a href="tel:48508239654">{lang.contact_phone}</a>
                   </li>
                   <li>
-                    <a href="mailto:duomilonga@gmail.com">
+                    <a href="mailto:contact@coloursoftango.com">
                       {lang.contact_mail}
                     </a>
                   </li>
@@ -90,7 +89,7 @@ const Contact = () => {
           {isContactForm && <ContactForm language={language} />}
         </div>
       </div>
-      <Head title='Duo Milonga - Contact'/>
+      <Head title="Duo Milonga - Contact" />
     </div>
   );
 };

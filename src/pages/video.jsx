@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 //COMPONENTS
@@ -48,7 +48,7 @@ const Video = () => {
     <div
       className={`page h-screen relative ${showModal && "overflow-hidden "}`}
     >
-       <Loader />
+      <Loader />
       {/* BACKGROUN */}
       <div className="h-screen w-full fixed left-0 top-0 -z-[2]">
         <StaticImage

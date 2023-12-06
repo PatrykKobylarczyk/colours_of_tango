@@ -87,13 +87,13 @@ const MusicPlayer = () => {
   return (
     <AnimatePresence>
       <motion.div
-        className="w-[280px] h-auto md:w-[500px] z-[6]"
+        className="flex flex-col lg:flex-row lg:gap-3 w-[280px] lg:h-1/2 md:w-[1000px] z-20"
         initial={{ x: 20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: 20, opacity: 0 }}
         transition={{ delay: 0.8, duration: 0.5 }}
       >
-        <div className="relative flex flex-col w-full bg-black/80  md:pt-5 lg:pt-10 px-3 rounded-md">
+        <div className="relative flex flex-col w-full bg-black/80  md:pt-5 lg:py-10 px-3 rounded-md">
           {/* SONG TITLE */}
           <h1 className="absolute top-0 left-0 w-full h-full grid place-items-center text-2xl xl:text-4xl font-black -translate-y-5 xl:translate-y-0">
             {musicData[currentIndex].title}
@@ -164,7 +164,7 @@ const MusicPlayer = () => {
 
         {/* SONG LIST */}
         <motion.ul
-          className="w-full h-auto flex flex-col gap-1 xl:gap-3 mt-3"
+          className="w-full h-full flex flex-col gap-1 xl:gap-3 mt-3 lg:mt-0"
           initial={{}}
           transition={{
             staggerChildren: 0.1,
@@ -175,7 +175,7 @@ const MusicPlayer = () => {
         >
           {musicData.map((song, index) => (
             <motion.li
-              className={`bg-black/80 px-8 py-3 sm:py-2 xl:py-5 text-sm xl:text-base rounded-md cursor-pointer border-[1px] ${
+              className={`bg-black/80 lg:h-1/3 px-8 py-3 sm:py-2 xl:py-5 text-sm xl:text-base rounded-md cursor-pointer border-[1px] flex items-center ${
                 currentSong === song
                   ? "border-[#af2622]/60 "
                   : "border-black/80"

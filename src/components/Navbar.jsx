@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "gatsby";
 
 //LIBS
@@ -44,8 +44,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       <header>
-        <Logo/>
-      
+        <Logo />
 
         {/* DESKTOP NAV */}
         {isAboveMediumScreens ? (

@@ -125,13 +125,9 @@ export const query = graphql`
         extension: { regex: "/(jpg)/" }
         name: {
           nin: [
-            "hqdefault"
-            "1-Home Poczernione-pion"
-            "1-Home Poczernione"
             "tn1"
             "tn2"
             "tn4"
-            "Bez nazwy-1"
             "favicon"
           ]
         }
