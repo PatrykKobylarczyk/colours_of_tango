@@ -89,7 +89,7 @@ const Contact = () => {
           {isContactForm && <ContactForm language={language} />}
         </div>
       </div>
-      <Head title="Duo Milonga - Contact" />
+      <Head title="Colours of Tango - Contact" />
     </div>
   );
 };

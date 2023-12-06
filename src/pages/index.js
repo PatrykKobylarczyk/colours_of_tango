@@ -145,7 +145,7 @@ const IndexPage = () => {
         </motion.button>
       </div>
 
-      <Head title="Duo Milonga- Home" />
+      <Head title="Colours of Tango - Home" />
     </div>
   );
 };

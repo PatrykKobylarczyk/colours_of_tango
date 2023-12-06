@@ -95,6 +95,13 @@ const Navbar = () => {
             >
               <Link to="/contact">{lang.menu_contact}</Link>
             </motion.div>
+
+            <motion.div
+              transition={{ duration: 0.3, ease: [0.435, 0.135, 0.09, 0.83] }}
+              variants={projectVariant}
+            >
+              <Link to="/shop">{lang.menu_shop}</Link>
+            </motion.div>
           </motion.div>
         ) : (
           <Hamburger
@@ -189,6 +196,17 @@ const Navbar = () => {
                 >
                   <Link to="/contact" onClick={() => setIsMenuToggled(false)}>
                     {lang.menu_contact}
+                  </Link>
+                </motion.div>
+                <motion.div
+                  transition={{
+                    duration: 0.3,
+                    ease: [0.435, 0.135, 0.09, 0.83],
+                  }}
+                  variants={projectVariant}
+                >
+                  <Link to="/shop" onClick={() => setIsMenuToggled(false)}>
+                    {lang.menu_shop}
                   </Link>
                 </motion.div>
               </motion.div>

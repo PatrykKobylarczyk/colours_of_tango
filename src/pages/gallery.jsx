@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 //LIBS'
@@ -18,6 +18,14 @@ import { useRecoilState } from "recoil";
 import { languageState } from "../atoms/atom";
 
 const Gallery = ({ data }) => {
+
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [showModal, setShowModal] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -113,7 +121,7 @@ const Gallery = ({ data }) => {
       {/* BLENDS */}
       <div className=" fixed left-0 top-0 w-full h-[20vh] bg-gradient-to-b from-black z-10"></div>
       <div className=" fixed left-0 bottom-0 w-full h-[10vh] z-10"></div>
-      <Head title="Duo Milonga - Gallery" />
+      <Head title="Colours of Tango - Gallery" />
     </div>
   );
 };

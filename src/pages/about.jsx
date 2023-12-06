@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 //LIBS'
@@ -24,6 +24,15 @@ import { lang_PL } from "../data/lang-pack";
 import Loader from "../components/Loader";
 
 const About = () => {
+
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+
+
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [language] = useRecoilState(languageState);
   const [showMoreDuo, setShowMoreDuo] = useState(false);
@@ -174,7 +183,7 @@ const About = () => {
       </section>
       <div className=" fixed left-0 top-0 w-full h-[20vh] bg-gradient-to-b from-black z-10"></div>
       <div className=" fixed left-0 bottom-0 w-full h-[20vh] bg-gradient-to-t from-black z-10"></div>
-      <Head title="Duo Milonga - About" />
+      <Head title="Colours of Tango - About" />
     </div>
   );
 };
