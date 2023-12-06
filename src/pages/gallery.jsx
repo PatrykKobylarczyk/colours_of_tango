@@ -59,7 +59,7 @@ const Gallery = ({ data }) => {
       {/* BACKGROUND  */}
       <div className="w-full fixed  top-0 right-0">
         <StaticImage
-          src="../assets/pictures/6554.jpg"
+          src="../assets/pictures/72272.jpg"
           alt="main room"
           className="fixed w-full h-screen -z-[2]"
           objectPosition={`${isAboveMediumScreens ? "0% 0%" : "31% 0%"}`}
