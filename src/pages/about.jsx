@@ -66,7 +66,7 @@ const About = () => {
       {/* BACKGROUND  */}
       <div className="fixed overflow-hidden top-0 right-0 w-full">
         <StaticImage
-          src="../assets/pictures/6296.jpg"
+          src="../assets/pictures/6292.jpg"
           alt="main room"
           className="fixed w-full h-screen -z-[2]"
         />
