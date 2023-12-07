@@ -108,7 +108,7 @@ const MusicPlayer = () => {
               onTimeUpdate={handleAudioUpdate}
               onEnded={nextSong}
             />
-            {/* {!(isIOS || isSafari) ? ( */}
+            {!(isIOS || isSafari) ? (
               <AudioSpectrum
                 id="audio-canvas"
                 height={isAboveLargeScreens ? 200 : 110}
@@ -125,9 +125,9 @@ const MusicPlayer = () => {
                 ]}
                 gap={4}
               />
-            {/* ) : (
+            ) : (
               <AudioSpectrumAnimation IsMusicInPlayer={IsMusicInPlayer} />
-            )} */}
+            )}
           </div>
 
           {/* CONTROL PANEL */}
@@ -175,7 +175,7 @@ const MusicPlayer = () => {
         >
           {musicData.map((song, index) => (
             <motion.li
-              className={`bg-black/80 lg:h-1/3 px-8 py-3 sm:py-2 xl:py-5 text-sm xl:text-base rounded-md cursor-pointer border-[1px] flex items-center ${
+              className={`bg-black/80 lg:h-1/3 px-8 py-3 sm:py-2 xl:py-5 text-sm xl:text-base rounded-md cursor-pointer border-[1px] flex items ${
                 currentSong === song
                   ? "border-[#af2622]/60 "
                   : "border-black/80"
