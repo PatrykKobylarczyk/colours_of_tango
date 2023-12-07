@@ -15,16 +15,16 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        icon: 'src/assets/images/favicon.png',
+        icon: "src/assets/images/favicon.png",
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/assets/pictures`,
-        name: "pictures",
+        path: `${__dirname}/src/assets/images`,
+        name: "images",
       },
     },
   ],
