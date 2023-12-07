@@ -49,7 +49,7 @@ const Shop = () => {
           objectFit="cover"
         />
       </div>
-      <div className="w-full h-screen flex flex-col justify-center items-center lg:gap-10 z-10">
+      <div className="fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center lg:gap-10 z-10">
         <AnimatePresence>
           <motion.div
             className="w-2/3 md:w-2/5  flex md:flex-row flex-col"
