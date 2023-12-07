@@ -24,14 +24,12 @@ import { lang_PL } from "../data/lang-pack";
 import Loader from "../components/Loader";
 
 const About = () => {
-
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
       const locomotiveScroll = new LocomotiveScroll();
     })();
   }, []);
-
 
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [language] = useRecoilState(languageState);
@@ -71,7 +69,6 @@ const About = () => {
           src="../assets/pictures/6296.jpg"
           alt="main room"
           className="fixed w-full h-screen -z-[2]"
-          // objectPosition={`${isAboveMediumScreens ? "0% bottom" : "47% 0%"}`}
         />
 
         <motion.div
