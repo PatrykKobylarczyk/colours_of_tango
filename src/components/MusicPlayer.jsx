@@ -108,7 +108,7 @@ const MusicPlayer = () => {
               onTimeUpdate={handleAudioUpdate}
               onEnded={nextSong}
             />
-            {!(isIOS || isSafari) ? (
+            {/* {!(isIOS || isSafari) ? ( */}
               <AudioSpectrum
                 id="audio-canvas"
                 height={isAboveLargeScreens ? 200 : 110}
@@ -125,9 +125,9 @@ const MusicPlayer = () => {
                 ]}
                 gap={4}
               />
-            ) : (
+            {/* ) : (
               <AudioSpectrumAnimation IsMusicInPlayer={IsMusicInPlayer} />
-            )}
+            )} */}
           </div>
 
           {/* CONTROL PANEL */}
