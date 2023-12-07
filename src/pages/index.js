@@ -74,13 +74,13 @@ const IndexPage = () => {
       <main>
         {isAboveSmallScreens ? (
             <StaticImage
-              src="../assets/pictures/6762.jpg"
+              src="../assets/pictures/66412.jpg"
               alt="colours of tango "
               className=" h-full -z-50 brightness-[85%]"
             />
         ) : (
           <StaticImage
-            src="../assets/pictures/6762m.jpg"
+            src="../assets/pictures/mobile.jpg"
             alt="main room"
             className="h-full -z-50"
             objectFit="cover"
