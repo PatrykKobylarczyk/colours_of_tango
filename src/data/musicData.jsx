@@ -12,12 +12,6 @@ export const musicData = [
   },
   {
     id: 2,
-    author: "Konrad Salwiński",
-    title: "Estrella de medianoche",
-    music: Estrella_de_medianoche
-  },
-  {
-    id: 3,
     author: "Hector Stamponi",
     title: "Flor de lino",
     music: Flor_de_lino
@@ -27,5 +21,11 @@ export const musicData = [
     author: "Pedro Laurenz",
     title: "Milonga de mis amores",
     music: Milonga_de_mis_amores
+  },
+  {
+    id: 4,
+    author: "Konrad Salwiński",
+    title: "Estrella de medianoche",
+    music: Estrella_de_medianoche
   },
 ];
