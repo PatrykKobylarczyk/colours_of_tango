@@ -1,24 +1,31 @@
-import milonga from "../assets/audio/salwinski_milonga.mp3";
-import air from "../assets/audio/bach_air.mp3";
-import night from "../assets/audio/majkusiak_night.mp3";
+import El_choclo from "../assets/audio/El_choclo.mp3";
+import Estrella_de_medianoche from "../assets/audio/Estrella_de_medianoche.mp3";
+import Flor_de_lino from "../assets/audio/Flor_de_lino.mp3";
+import Milonga_de_mis_amores from "../assets/audio/Milonga_de_mis_amores.mp3";
 
 export const musicData = [
   {
     id: 1,
-    author: "Konrad Salwiński",
-    title: "Milonga il pettine",
-    music: milonga
+    author: "Ángel Villoldo",
+    title: "El choclo",
+    music: El_choclo
   },
   {
     id: 2,
-    author: "Johann Sebastian Bach",
-    title: "Air on the G string",
-    music: air
+    author: "Konrad Salwiński",
+    title: "Estrella de medianoche",
+    music: Estrella_de_medianoche
   },
   {
     id: 3,
-    author: "Mikołaj Majkusiak",
-    title: "One night of passion",
-    music: night
+    author: "Hector Stamponi",
+    title: "Flor de lino",
+    music: Flor_de_lino
+  },
+  {
+    id: 3,
+    author: "Pedro Laurenz",
+    title: "Milonga de mis amores",
+    music: Milonga_de_mis_amores
   },
 ];

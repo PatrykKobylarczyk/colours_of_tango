@@ -13,7 +13,7 @@ import { useRecoilState } from "recoil";
 import { languageState, musicInFooter, musicInPlayer } from "../atoms/atom";
 
 // DATA
-import audio from "../assets/audio/salwinski_milonga.mp3";
+import audio from "../assets/audio/El_choclo.mp3";
 import { useCallback } from "react";
 
 const Footer = () => {

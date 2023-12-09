@@ -111,7 +111,7 @@ const IndexPage = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 3 }}
+          transition={{ duration: 0.5, delay: 2 }}
         >
           {vocal}
         </motion.div>
@@ -120,7 +120,7 @@ const IndexPage = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 2 }}
+          transition={{ duration: 0.5, delay: 2.5 }}
         >
           {harp}
         </motion.div>
@@ -130,7 +130,7 @@ const IndexPage = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 2.5 }}
+          transition={{ duration: 0.5, delay: 3 }}
         >
           {accordion}
         </motion.div>
