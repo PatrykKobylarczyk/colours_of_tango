@@ -59,7 +59,7 @@ const Contact = () => {
                     <a href="tel:48508239654">{lang.contact_phone}</a>
                   </li>
                   <li>
-                    <a href="mailto:contact@coloursoftango.com">
+                    <a href="mailto:coloursoftango@gmail.com">
                       {lang.contact_mail}
                     </a>
                   </li>
