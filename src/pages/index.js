@@ -73,11 +73,11 @@ const IndexPage = () => {
       <Loader />
       <main>
         {isAboveSmallScreens ? (
-            <StaticImage
-              src="../assets/pictures/66412.jpg"
-              alt="colours of tango "
-              className=" h-full -z-50 brightness-[85%]"
-            />
+          <StaticImage
+            src="../assets/pictures/66412.jpg"
+            alt="colours of tango "
+            className=" h-full -z-50 brightness-[85%]"
+          />
         ) : (
           <StaticImage
             src="../assets/pictures/mobile.jpg"
@@ -111,6 +111,15 @@ const IndexPage = () => {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 3 }}
+        >
+          {vocal}
+        </motion.div>
+        <motion.div
+          className="flex text-xs md:text-xl"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 2 }}
         >
           {harp}
@@ -124,15 +133,6 @@ const IndexPage = () => {
           transition={{ duration: 0.5, delay: 2.5 }}
         >
           {accordion}
-        </motion.div>
-        <motion.div
-          className="flex text-xs md:text-xl"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 3 }}
-        >
-          {vocal}
         </motion.div>
 
         <motion.button

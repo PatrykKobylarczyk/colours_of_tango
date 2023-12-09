@@ -8,9 +8,14 @@ import { Link } from "gatsby";
 import { useRecoilState } from "recoil";
 import { languageState } from "../atoms/atom";
 
+// DATA
+import { lang_EN } from "../data/lang-pack";
+import { lang_PL } from "../data/lang-pack";
+
 const Shop = () => {
   const [language] = useRecoilState(languageState);
   const contactUs = language === "PL" ? "Contact" : "Kontakt";
+  const lang = language === "PL" ? lang_EN : lang_PL;
 
   const container = {
     hidden: {},
@@ -73,17 +78,17 @@ const Shop = () => {
               />
             </motion.div>
             <motion.div
-              className="w-full sm:p-10 md:p-20 flex flex-col md:gap-2 mt-5 md:mt-0 justify-center"
+              className="w-full sm:p-10 md:p-16 flex flex-col md:gap-2 mt-5 md:mt-0 justify-center"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 1.5 }}
             >
               <h2 className="w-full font-bold text-sm md:text-xl">
-                Kup Naszą płytę
+                {lang.buy_cd}
               </h2>
               <p className="w-full text-xs md:text-sm">
-                W celu zakupienia płyty napisz do Nas.
+                {lang.buy_cd_contact}
               </p>
               <motion.button
                 className="w-28 md:w-40 border-[1px] border-white rounded-full font-semibold text-xs md:text-sm h-8 py-2 md:h-12 mt-3 hover:border-[#d50006] hover:bg-[#d50006] transition duration-200"

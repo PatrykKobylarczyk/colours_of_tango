@@ -99,14 +99,21 @@ const About = () => {
         {/* Oscar */}
         <div className="mt-20 lg:mt-40">
           <div className="flex flex-col md:flex-row items-end w-full gap-5">
+          {!isAboveMediumScreens && (
+              <h1 className="w-full md:w-1/2 text-2xl md:text-4xl font-bold md:text-left">
+                {lang.about_oscar_name}
+              </h1>
+            )}
             <StaticImage
               src="../assets/pictures/6513.jpg"
-              alt="main room"
-              className="w-full md:w-1/2 brightness-110"
+              alt="Oscar Ernesto Ovejero"
+              className="w-full md:w-1/2"
             />
-            <h1 className="w-full md:w-1/2 text-2xl md:text-4xl font-bold md:text-left">
-              {lang.about_oscar_name}
-            </h1>
+            {isAboveMediumScreens && (
+              <h1 className="w-full md:w-1/2 text-2xl md:text-4xl font-bold md:text-left">
+                {lang.about_oscar_name}
+              </h1>
+            )}
           </div>
           <p className="mt-10 lg:mt-10">{lang.about_oscar_paragraph1}</p>
           {isAboveMediumScreens ? (
@@ -129,7 +136,7 @@ const About = () => {
             </h1>
             <StaticImage
               src="../assets/pictures/6326.jpg"
-              alt="main room"
+              alt="Aneta Salwińska"
               className="w-full md:w-1/2 brightness-110"
             />
           </div>
@@ -156,7 +163,7 @@ const About = () => {
             )}
             <StaticImage
               src="../assets/pictures/6437.jpg"
-              alt="main room"
+              alt="Konrad Salwiński"
               className="w-full md:w-1/2"
             />
             {isAboveMediumScreens && (
