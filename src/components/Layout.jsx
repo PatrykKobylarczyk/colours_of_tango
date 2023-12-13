@@ -9,10 +9,10 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 const Layout = ({ children }) => {
-
   return (
     <>
       <Navbar />
+      <Footer />
       <AnimatePresence>
         <motion.div
           initial={{ y: 0 }}
@@ -28,7 +28,6 @@ const Layout = ({ children }) => {
           {children}
         </motion.div>
       </AnimatePresence>
-      <Footer />
     </>
   );
 };
