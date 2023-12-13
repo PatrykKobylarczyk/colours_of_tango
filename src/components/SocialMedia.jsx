@@ -31,7 +31,7 @@ const SocialMedia = () => {
           <TbBrandSoundcloud className="w-6 h-6 transition duration-200 hover:text-red hover:-translate-y-1" />
         </a>
       </div>
-      <a href="https://duomilonga.pl" target="_blank" rel="noreferrer" className="mb-2 md:mb-0">
+      <a href="https://duomilonga.pl" target="_blank" rel="noreferrer" className="mb-2">
         <svg
           width="100"
           height="25"
