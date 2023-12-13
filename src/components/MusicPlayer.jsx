@@ -126,7 +126,7 @@ const MusicPlayer = () => {
                 gap={4}
               />
             ) : ( */}
-            <AudioSpectrumAnimation IsMusicInPlayer={IsMusicInPlayer} />
+              <AudioSpectrumAnimation IsMusicInPlayer={IsMusicInPlayer} />
             {/* )} */}
           </div>
 
