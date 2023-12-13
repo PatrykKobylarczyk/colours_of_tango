@@ -7,7 +7,7 @@ import { TbBrandSoundcloud } from "react-icons/tb";
 
 const SocialMedia = () => {
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row md:justify-start">
       <div className="flex gap-4 items-center">
         <a
           href="https://www.facebook.com/coloursoftango"
