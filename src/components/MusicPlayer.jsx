@@ -87,7 +87,7 @@ const MusicPlayer = () => {
   return (
     <AnimatePresence>
       <motion.div
-        className="w-[280px] h-auto md:w-[500px] z-[6]"
+        className="w-[280px] h-auto md:w-[800px] z-[6] flex flex-col md:flex-row md:gap-1"
         initial={{ x: 20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: 20, opacity: 0 }}
@@ -108,7 +108,7 @@ const MusicPlayer = () => {
               onTimeUpdate={handleAudioUpdate}
               onEnded={nextSong}
             />
-            {!(isIOS || isSafari) ? (
+            {/* {!(isIOS || isSafari) ? (
               <AudioSpectrum
                 id="audio-canvas"
                 height={isAboveLargeScreens ? 200 : 110}
@@ -125,9 +125,9 @@ const MusicPlayer = () => {
                 ]}
                 gap={4}
               />
-            ) : (
-              <AudioSpectrumAnimation IsMusicInPlayer={IsMusicInPlayer} />
-            )}
+            ) : ( */}
+            <AudioSpectrumAnimation IsMusicInPlayer={IsMusicInPlayer} />
+            {/* )} */}
           </div>
 
           {/* CONTROL PANEL */}
@@ -164,7 +164,7 @@ const MusicPlayer = () => {
 
         {/* SONG LIST */}
         <motion.ul
-          className="w-full h-auto flex flex-col gap-1 xl:gap-3 mt-3"
+          className="w-full h-auto flex flex-col gap-1 xl:gap-3 mt-1 md:mt-0 "
           initial={{}}
           transition={{
             staggerChildren: 0.1,
@@ -175,7 +175,7 @@ const MusicPlayer = () => {
         >
           {musicData.map((song, index) => (
             <motion.li
-              className={`bg-black/80 px-8 py-3 sm:py-2 xl:py-5 text-sm xl:text-base rounded-md cursor-pointer border-[1px] ${
+              className={`flex items-center h-full w-full bg-black/80 px-4 md:px-8 py-3 sm:py-2 xl:py-5 text-xs xl:text-base rounded-md cursor-pointer border-[1px] ${
                 currentSong === song
                   ? "border-[#af2622]/60 "
                   : "border-black/80"
@@ -183,7 +183,7 @@ const MusicPlayer = () => {
               key={song.title}
               onClick={() => setSongFromList(song, index)}
             >
-              {song.title} -{!isAboveMediumScreens && <br />} {song.author}
+              {song.title} - {song.author}
             </motion.li>
           ))}
         </motion.ul>

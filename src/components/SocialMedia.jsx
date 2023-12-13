@@ -7,7 +7,7 @@ import { TbBrandSoundcloud } from "react-icons/tb";
 
 const SocialMedia = () => {
   return (
-    <div className="flex flex-col md:flex-row md:justify-start">
+    <div className="flex flex-col md:flex-row justify-start">
       <div className="flex gap-4 items-center">
         <a
           href="https://www.facebook.com/coloursoftango"
@@ -31,11 +31,11 @@ const SocialMedia = () => {
           <TbBrandSoundcloud className="w-6 h-6 transition duration-200 hover:text-red hover:-translate-y-1" />
         </a>
       </div>
-      <a href="https://duomilonga.pl" target="_blank" rel="noreferrer" className="mb-2">
+      <a href="https://duomilonga.pl" target="_blank" rel="noreferrer" className="mb-2 -ml-2 md:ml-0">
         <svg
           width="100"
           height="25"
-          viewBox="0 0 108 33"
+          viewBox="0 0 100 33"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >

@@ -6,25 +6,25 @@ import Milonga_de_mis_amores from "../assets/audio/Milonga_de_mis_amores.mp3";
 export const musicData = [
   {
     id: 1,
-    author: "Ángel Villoldo",
+    author: "Á. Villoldo",
     title: "El choclo",
     music: El_choclo
   },
   {
     id: 2,
-    author: "Hector Stamponi",
+    author: "H. Stamponi",
     title: "Flor de lino",
     music: Flor_de_lino
   },
   {
     id: 3,
-    author: "Pedro Laurenz",
+    author: "P. Laurenz",
     title: "Milonga de mis amores",
     music: Milonga_de_mis_amores
   },
   {
     id: 4,
-    author: "Konrad Salwiński",
+    author: "K. Salwiński",
     title: "Estrella de medianoche",
     music: Estrella_de_medianoche
   },
