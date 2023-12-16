@@ -121,7 +121,7 @@ const MusicPlayer = () => {
                 meterColor={[
                   { stop: 0, color: "#f00" },
                   { stop: 0.6, color: "#0e879c" },
-                  { stop: 1, color: "red" },
+                  { stop: 1, color: "red" }
                 ]}
                 gap={4}
               />
