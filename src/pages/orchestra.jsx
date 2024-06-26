@@ -63,7 +63,7 @@ const Orchestra = () => {
             viewport={{ once: true }}
             variants={container}
           >
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -96,7 +96,7 @@ const Orchestra = () => {
               >
                 <Link to="/contact">{contactUs}</Link>
               </motion.button>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </AnimatePresence>
       </div>

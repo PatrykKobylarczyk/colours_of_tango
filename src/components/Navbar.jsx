@@ -88,13 +88,6 @@ const Navbar = () => {
             >
               <Link to="/gallery">{lang.menu_media_gallery}</Link>
             </motion.div>
-
-            <motion.div
-              transition={{ duration: 0.3, ease: [0.435, 0.135, 0.09, 0.83] }}
-              variants={projectVariant}
-            >
-              <Link to="/contact">{lang.menu_contact}</Link>
-            </motion.div>
             <motion.div
               transition={{ duration: 0.3, ease: [0.435, 0.135, 0.09, 0.83] }}
               variants={projectVariant}
