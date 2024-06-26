@@ -47,7 +47,7 @@ const Orchestra = () => {
         ></motion.div>
         )
         <StaticImage
-          src="../assets/pictures/orchestra.jpg"
+          src="../assets/images/orchester.jpg"
           alt="background shop page colours of tango"
           className="fixed top-0 left-0 h-screen"
           objectPosition="63% 0"
