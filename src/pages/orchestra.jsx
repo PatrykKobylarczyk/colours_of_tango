@@ -1,5 +1,5 @@
+  import React, { useEffect, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
 import Loader from "../components/Loader";
 import { AnimatePresence, motion } from "framer-motion";
 import Head from "../components/Head";
@@ -12,10 +12,20 @@ import { languageState } from "../atoms/atom";
 import { lang_EN } from "../data/lang-pack";
 import { lang_PL } from "../data/lang-pack";
 
+// HOOKS
+import useMediaQuery from "../hooks/useMediaQuery";
+
 const Orchestra = () => {
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [language] = useRecoilState(languageState);
-  const contactUs = language === "PL" ? "Contact" : "Kontakt";
   const lang = language === "PL" ? lang_EN : lang_PL;
+
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
 
   const container = {
     hidden: {},
@@ -46,13 +56,23 @@ const Orchestra = () => {
           transition={{ ease: "easeInOut", delay: 0.5, duration: 1 }}
         ></motion.div>
         )
-        <StaticImage
-          src="../assets/images/orchester.jpg"
-          alt="background shop page colours of tango"
-          className="fixed top-0 left-0 h-screen"
-          objectPosition="63% 0"
-          objectFit="cover"
-        />
+        {isAboveMediumScreens ? (
+          <StaticImage
+            src="../assets/images/orchester.jpg"
+            alt="background shop page colours of tango"
+            className="fixed top-0 left-0 h-screen"
+            objectPosition="63% 80%"
+            objectFit="cover"
+          />
+        ) : (
+          <StaticImage
+            src="../assets/images/orchester_mobile.jpg"
+            alt="background shop page colours of tango"
+            className="fixed top-0 left-0 h-screen"
+            objectPosition="63% 80%"
+            objectFit="cover"
+          />
+        )}
       </div>
       <div className="fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center lg:gap-10 z-10">
         <AnimatePresence>
@@ -62,42 +82,7 @@ const Orchestra = () => {
             animate="visible"
             viewport={{ once: true }}
             variants={container}
-          >
-            {/* <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1 }}
-            >
-              <StaticImage
-                src="../assets/pictures/cd.jpg"
-                alt="cd colours of tango"
-                className="w-full aspect-auto md:min-w-[400px] max-w-[400px]"
-                objectPosition="63% 0"
-                objectFit="contain"
-              />
-            </motion.div>
-            <motion.div
-              className="w-full sm:p-10 md:p-16 flex flex-col md:gap-2 mt-5 md:mt-0 justify-center"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 1.5 }}
-            >
-              <h2 className="w-full font-bold text-sm md:text-xl">
-                {lang.buy_cd}
-              </h2>
-              <p className="w-full text-xs md:text-sm">{lang.buy_cd_contact}</p>
-              <motion.button
-                className="w-28 md:w-40 border-[1px] border-white rounded-full font-semibold text-xs md:text-sm h-8 py-2 md:h-12 mt-3 hover:border-[#d50006] hover:bg-[#d50006] transition duration-200"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 2 }}
-              >
-                <Link to="/contact">{contactUs}</Link>
-              </motion.button>
-            </motion.div> */}
-          </motion.div>
+          ></motion.div>
         </AnimatePresence>
       </div>
 
