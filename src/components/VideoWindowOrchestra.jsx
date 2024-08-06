@@ -3,7 +3,7 @@ import React from "react";
 // COMPONENTS
 import { SlControlPlay } from "react-icons/sl";
 import Button from "../components/Button";
-
+import image from "../assets/images/orchester2.jpg"
 
 const VideoWindowOrchestra = ({ setShowModal }) => {
 
@@ -30,7 +30,7 @@ const VideoWindowOrchestra = ({ setShowModal }) => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <Button content={<SlControlPlay className=" ml-1 text-white" />} />
         </div>
-        <img src="../assets/images/orchester.jpg" alt={"Colour of Tango & Orchester"} className="w-[120%] h-full" />
+        <img src={image} alt={"Colour of Tango & Orchester"} className="w-[120%] h-full" />
       </div>
     </div>
   );

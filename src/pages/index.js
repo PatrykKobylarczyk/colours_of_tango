@@ -134,7 +134,6 @@ const IndexPage = () => {
         >
           {accordion}
         </motion.div>
-
         <motion.button
           className="w-28 md:w-40 border-[1px] border-white rounded-full font-semibold text-xs md:text-sm h-8 py-2 md:h-20 mt-3 hover:border-[#d50006] hover:bg-[#d50006] transition duration-200"
           initial={{ opacity: 0 }}

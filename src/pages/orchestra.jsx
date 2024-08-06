@@ -50,7 +50,7 @@ const Orchestra = () => {
     "o",
   ];
 
-  const orchestra = "& Orchestra";
+  const orchestra = `& Orchestra`;
 
   const container = {
     hidden: {},
@@ -70,9 +70,7 @@ const Orchestra = () => {
   };
 
   return (
-    <div
-      className={`page h-screen relative ${showModal && "overflow-hidden "}`}
-    >
+    <div className={`page h-screen relative `}>
       <Loader />
       <div>
         (
@@ -87,7 +85,7 @@ const Orchestra = () => {
           <StaticImage
             src="../assets/images/orchester.jpg"
             alt="background shop page colours of tango"
-            className="fixed top-0 left-0 h-screen"
+            className="fixed top-0 left-0 h-screen -z-50"
             objectPosition="63% 80%"
             objectFit="cover"
           />
@@ -95,7 +93,7 @@ const Orchestra = () => {
           <StaticImage
             src="../assets/images/orchester_mobile.jpg"
             alt="background shop page colours of tango"
-            className="fixed top-0 left-0 h-screen"
+            className="fixed top-0 left-0 h-screen -z-50"
             objectPosition="63% 80%"
             objectFit="cover"
           />
@@ -116,17 +114,25 @@ const Orchestra = () => {
             </motion.div>
           ))}
         </motion.div>
-        {/* <motion.div
-          className="flex justify-end text-xs md:text-xl"
+
+        <motion.div
+          className="flex justify-end text-xs md:text-xl -mt-3 md:-mt-6"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 2 }}
+          transition={{ duration: 0.5, delay: 2.7 }}
         >
           {orchestra}
-        </motion.div> */}
-        <div className="flex justify-end text-xs md:text-xl opacity-100">{orchestra}</div>
-        <VideoWindowOrchestra setShowModal={setShowModal} item={item} />
+        </motion.div>
+        <motion.div
+          className="flex justify-end text-xs md:text-xl mt-20"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 3 }}
+        >
+          <VideoWindowOrchestra setShowModal={setShowModal} item={item} />
+        </motion.div>
 
         {showModal && <VideoModalOrchestra setShowModal={setShowModal} />}
       </section>
