@@ -50,7 +50,10 @@ export const lang_EN = {
   about_more: "more...",
   about_less: "less...",
   buy_cd: "Want to hear more?",
-  buy_cd_contact: "Contact us to buy a CD!"
+  buy_cd_contact: "Contact us to buy a CD!",
+  orchestra1: "Colours of Tango & Orchestra is an artistic project where the Colours of Tango artists are accompanied by a chamber orchestra and professional dance couples.",
+  orchestra2: "The orchestral sound is enriched by the combination of harp and accordion, creating a cohesive whole dialogue with the soloists, and enhancing the drama while adding new colors to this musical and dance spectacle.",
+  orchestra3: "The ensemble exclusively uses its own original orchestral arrangements and scores."
 };
 
 export const lang_PL = {
@@ -104,5 +107,12 @@ export const lang_PL = {
   about_more: "więcej...",
   about_less: "mniej...",
   buy_cd: "Masz apetyt na więcej?",
-  buy_cd_contact: "Napisz do nas i kup płytę!"
+  buy_cd_contact: "Napisz do nas i kup płytę!",
+  orchestra1: "Colours of Tango & Orchestra to projekt artystyczny, w którym artystom Colours of Tango towarzyszy orkiestra kameralna oraz profesjonalne pary taneczne.",
+  orchestra2: "Orkiestrowe brzmienie dopełnia zestawienie harfy z akordeonem tworząc spójną całość, dialoguje z solistami, a także potęguje dramaturgię i dodaje nowych barw temu muzyczno-tanecznemu widowisku.",
+  orchestra3: "Zespół korzysta wyłącznie z własnych, autorskich aranżacji orkiestrowych i partytur."
+
+  
+  
+  
 };
