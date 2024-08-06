@@ -72,14 +72,7 @@ const Orchestra = () => {
     <div className={`page h-screen relative `}>
       <Loader />
       <div>
-        (
-        <motion.div
-          className="pages fixed left-0 top-0 w-full h-screen bg-darker-gradient-bg z-[5]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.8 }}
-          transition={{ ease: "easeInOut", delay: 0.5, duration: 1 }}
-        ></motion.div>
-        )
+      
         {isAboveMediumScreens ? (
           <StaticImage
             src="../assets/images/orchester.jpg"
@@ -99,7 +92,7 @@ const Orchestra = () => {
         )}
       </div>
       {/* CONTENT */}
-      <section className="w-full sm:max-w-[70vw] flex flex-col mx-auto px-5 lg:px-10 py-20">
+      <section className="absolute w-full sm:max-w-[70vw] flex flex-col mx-auto px-5 lg:px-10 py-20">
         <motion.div
           className="flex justify-end text-4xl md:text-6xl font-bold z-[7] mt-[35vh] sm:mt-[40vh] mb-5 md:mb-10"
           initial="hidden"
@@ -134,13 +127,13 @@ const Orchestra = () => {
         </motion.div>
 
         {showModal && <VideoModalOrchestra setShowModal={setShowModal} />}
-        <div className="mt-20 flex flex-col gap-6 z-[7]">
+        <div className="mt-20 flex flex-col gap-6">
           <p className="">{lang.orchestra1}</p>
           <p>{lang.orchestra2}</p>
           <p>{lang.orchestra3}</p>
         </div>
       </section>
-      <div className="w-full h-40"></div>
+      <div className="w-full h-40 md:h-40"></div>
       <Head title="Colours of Tango & Orchester" />
     </div>
   );
