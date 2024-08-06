@@ -69,7 +69,7 @@ const Orchestra = () => {
   };
 
   return (
-    <div className={`page h-screen relative `}>
+    <div className={`page h-screen relative ${showModal && "overflow-hidden "}`}>
       <Loader />
       <div>
       
@@ -92,7 +92,7 @@ const Orchestra = () => {
         )}
       </div>
       {/* CONTENT */}
-      <section className="absolute w-full sm:max-w-[70vw] flex flex-col mx-auto px-5 lg:px-10 py-20">
+      <section className="absolute top-0 left-0 w-full sm:max-w-[70vw] flex flex-col mx-auto px-5 lg:px-10 py-20">
         <motion.div
           className="flex justify-end text-4xl md:text-6xl font-bold z-[7] mt-[35vh] sm:mt-[40vh] mb-5 md:mb-10"
           initial="hidden"
