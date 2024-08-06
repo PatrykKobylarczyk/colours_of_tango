@@ -99,7 +99,7 @@ const Orchestra = () => {
         )}
       </div>
       {/* CONTENT */}
-      <section className="w-full sm:max-w-[70vw] flex flex-col mx-auto px-5 lg:px-10 pt-20 pb-40">
+      <section className="w-full sm:max-w-[70vw] flex flex-col mx-auto px-5 lg:px-10 py-20">
         <motion.div
           className="flex justify-end text-4xl md:text-6xl font-bold z-[7] mt-[35vh] sm:mt-[40vh] mb-5 md:mb-10"
           initial="hidden"
@@ -140,7 +140,7 @@ const Orchestra = () => {
           <p>{lang.orchestra3}</p>
         </div>
       </section>
-
+      <div className="w-full h-40"></div>
       <Head title="Colours of Tango & Orchester" />
     </div>
   );
