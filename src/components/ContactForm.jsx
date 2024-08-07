@@ -27,7 +27,7 @@ const ContactForm = ({ language }) => {
     <form
       target="_blank"
       onSubmit={onSubmit}
-      action="https://formsubmit.co/contact@coloursoftango.com"
+      action="https://formsubmit.co/iza@fantommedia.pl"
       method="POST"
       className="max-w-2xl z-20 mt-10 mx-auto lg:mx-0"
     >

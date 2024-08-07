@@ -56,15 +56,15 @@ const Contact = () => {
                 </p>
                 <ul className="text-lg mt-5 gap-4">
                   <li>
-                    <a href="tel:48508239654">{lang.contact_phone}</a>
+                    <a href="tel:48606733729">{lang.contact_phone}</a>
                   </li>
                   <li>
-                    <a href="mailto:coloursoftango@gmail.com">
+                    <a href="mailto:iza@fantommedia.pl">
                       {lang.contact_mail}
                     </a>
                   </li>
                   <li>
-                    <a href="https://wa.me/48508239654">
+                    <a href="https://wa.me/48606733729">
                       {lang.contact_whatsapp}
                     </a>
                   </li>
