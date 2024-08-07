@@ -77,10 +77,11 @@ const Orchestra = () => {
       <div className="fixed overflow-hidden top-0 right-0 h-screen w-auto z-0">
         <video
           src={isAboveMediumScreens ? video : video_mobile}
+          type="video/mp4"
           autoPlay
           muted
           loop
-          playsInline
+          playsinline
           className="w-full h-auto"
         ></video>
       </div>
