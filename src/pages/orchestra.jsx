@@ -81,7 +81,7 @@ const Orchestra = () => {
           autoPlay
           muted
           loop
-          playsinline
+          playsInline
           className="w-full h-auto"
         ></video>
       </div>
