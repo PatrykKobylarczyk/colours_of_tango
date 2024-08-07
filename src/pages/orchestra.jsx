@@ -11,7 +11,7 @@ import { languageState } from "../atoms/atom";
 import { lang_EN } from "../data/lang-pack";
 import { lang_PL } from "../data/lang-pack";
 import video from "../assets/movie/bg.mp4";
-import video_mobile from "../assets/movie/bgmobile.mp4";
+import video_mobile from "../assets/movie/bg_mobile.mp4";
 import { FaArrowRight } from "react-icons/fa";
 // HOOKS
 import useMediaQuery from "../hooks/useMediaQuery";
