@@ -129,7 +129,7 @@ const Orchestra = () => {
           <p>{lang.orchestra3}</p>
           <Link
             to="/video"
-            className="w-min mt-20 flex text-xs md:text-xl hover:text-[#d50006] transition duration-200 hover:translate-x-3"
+            className="w-min mt-20 flex text-l md:text-xl hover:text-[#d50006] transition duration-200 hover:translate-x-3"
           >
             <p>{lang.orchestra4}</p>
             <FaArrowRight className="mt-1 ml-2" />
