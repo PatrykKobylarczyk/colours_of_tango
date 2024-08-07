@@ -109,7 +109,7 @@ const Orchestra = () => {
         </motion.div>
 
         <motion.div
-          className="flex justify-end text-xs md:text-xl -mt-3 md:-mt-6"
+          className="flex justify-end text-m md:text-2xl -mt-3 md:-mt-6"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -129,13 +129,13 @@ const Orchestra = () => {
           <p>{lang.orchestra3}</p>
           <Link
             to="/video"
-            className="w-min mt-20 flex text-l md:text-xl hover:text-[#d50006] transition duration-200 hover:translate-x-3"
+            className="w-2/3 md:w-1/3 mt-20 flex text-l md:text-xl hover:text-[#d50006] transition duration-200 hover:translate-x-3"
           >
             <p>{lang.orchestra4}</p>
             <FaArrowRight className="mt-1 ml-2" />
           </Link>
         </motion.div>
-        <div className="w-full h-40"></div>
+        <div className="w-fit h-40"></div>
         {/* <motion.div
           className="flex justify-end text-xs md:text-xl mt-20"
           initial={{ opacity: 0, x: 20 }}
