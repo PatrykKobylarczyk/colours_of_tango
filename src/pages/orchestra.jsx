@@ -76,7 +76,7 @@ const Orchestra = () => {
       <Loader />
       <div className="fixed overflow-hidden top-0 right-0 h-screen w-auto z-0">
         <video
-          src={video}
+          src={isAboveMediumScreens ? video : video_mobile}
           autoPlay
           muted
           loop
