@@ -80,7 +80,7 @@ const Orchestra = () => {
           autoPlay
           muted
           loop
-          className=" h-screen w-auto"
+          className="w-full h-auto"
         ></video>
       </div>
       <motion.div
