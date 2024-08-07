@@ -54,14 +54,14 @@ const Contact = () => {
                 <p className="text-2xl lg:text-3xl font-bold mt-5">
                   {lang.contact_name}
                 </p>
-                <ul className="text-lg mt-5 gap-4">
+                {/* <p className="text-lg lg:text-xl mt-5">{lang.contact_name2}</p> */}
+                <ul className="text-lg gap-4 mt-5">
+                  <li className="mb-2">{lang.contact_name2}</li>
                   <li>
                     <a href="tel:48606733729">{lang.contact_phone}</a>
                   </li>
                   <li>
-                    <a href="mailto:iza@fantommedia.pl">
-                      {lang.contact_mail}
-                    </a>
+                    <a href="mailto:iza@fantommedia.pl">{lang.contact_mail}</a>
                   </li>
                   <li>
                     <a href="https://wa.me/48606733729">
