@@ -69,10 +69,9 @@ const Orchestra = () => {
   };
 
   return (
-    <div className={`page h-screen relative ${showModal && "overflow-hidden "}`}>
+    <div className={`w-full relative page`}>
       <Loader />
-      <div>
-      
+      <div className="fixed overflow-hidden top-0 right-0 w-full">
         {isAboveMediumScreens ? (
           <StaticImage
             src="../assets/images/orchester.jpg"
@@ -85,14 +84,14 @@ const Orchestra = () => {
           <StaticImage
             src="../assets/images/orchester_mobile.jpg"
             alt="background shop page colours of tango"
-            className="fixed top-0 left-0 h-screen -z-50"
+            className="fixed top-0 left-0 h-screen -z-50 overflow-hidden"
             objectPosition="63% 80%"
             objectFit="cover"
           />
         )}
       </div>
       {/* CONTENT */}
-      <section className="absolute top-0 left-0 w-full sm:max-w-[70vw] flex flex-col mx-auto px-5 lg:px-10 py-20">
+      <section className="absolute top-0 left-1/2 -translate-x-1/2 w-full sm:max-w-[70vw] flex flex-col px-5 lg:px-10 py-20 ">
         <motion.div
           className="flex justify-end text-4xl md:text-6xl font-bold z-[7] mt-[35vh] sm:mt-[40vh] mb-5 md:mb-10"
           initial="hidden"
@@ -127,13 +126,13 @@ const Orchestra = () => {
         </motion.div>
 
         {showModal && <VideoModalOrchestra setShowModal={setShowModal} />}
-        <div className="mt-20 flex flex-col gap-6">
+        <div className="mt-20 flex flex-col gap-6 px-5">
           <p className="">{lang.orchestra1}</p>
           <p>{lang.orchestra2}</p>
           <p>{lang.orchestra3}</p>
         </div>
+        <div className="w-full h-40"></div>
       </section>
-      <div className="w-full h-40 md:h-40"></div>
       <Head title="Colours of Tango & Orchester" />
     </div>
   );
