@@ -12,10 +12,12 @@ import { lang_EN } from "../data/lang-pack";
 import { lang_PL } from "../data/lang-pack";
 import video from "../assets/movie/bg.mp4";
 import video_mobile from "../assets/movie/bgmobile.mp4";
+import { FaArrowRight } from "react-icons/fa";
 // HOOKS
 import useMediaQuery from "../hooks/useMediaQuery";
 import VideoWindowOrchestra from "../components/VideoWindowOrchestra";
 import VideoModalOrchestra from "../components/VideoModalOrchestra";
+import { Link } from "gatsby";
 
 const Orchestra = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -113,6 +115,25 @@ const Orchestra = () => {
         >
           {orchestra}
         </motion.div>
+        <motion.div
+          className="mt-20 flex flex-col gap-6 px-5"
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 3.3 }}
+        >
+          <p className="">{lang.orchestra1}</p>
+          <p>{lang.orchestra2}</p>
+          <p>{lang.orchestra3}</p>
+          <Link
+            to="/video"
+            className="w-min mt-20 flex text-xs md:text-xl hover:text-[#d50006] transition duration-200 hover:translate-x-3"
+          >
+            <p>{lang.orchestra4}</p>
+            <FaArrowRight className="mt-1 ml-2" />
+          </Link>
+        </motion.div>
+        <div className="w-full h-40"></div>
         {/* <motion.div
           className="flex justify-end text-xs md:text-xl mt-20"
           initial={{ opacity: 0, x: 20 }}
@@ -124,18 +145,6 @@ const Orchestra = () => {
         </motion.div>
 
         {showModal && <VideoModalOrchestra setShowModal={setShowModal} />} */}
-        <motion.div
-          className="mt-20 flex flex-col gap-6 px-5"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 3.3 }}
-        >
-          <p className="">{lang.orchestra1}</p>
-          <p>{lang.orchestra2}</p>
-          <p>{lang.orchestra3}</p>
-        </motion.div>
-        <div className="w-full h-40"></div>
       </section>
       <div className=" fixed left-0 top-0 w-full h-[20vh] bg-gradient-to-b from-black z-10"></div>
       <div className=" fixed left-0 bottom-0 w-full h-[20vh] bg-gradient-to-t from-black z-10"></div>
