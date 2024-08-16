@@ -18,7 +18,10 @@ import { languageState } from "../atoms/atom";
 import { lang_EN } from "../data/lang-pack";
 import { lang_PL } from "../data/lang-pack";
 
+import useMediaQuery from "../hooks/useMediaQuery";
+
 const Contact = () => {
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [language] = useRecoilState(languageState);
   const [isContactForm, setIsContactForm] = useState(false);
   const lang = language === "PL" ? lang_EN : lang_PL;
@@ -35,13 +38,25 @@ const Contact = () => {
           transition={{ ease: "easeInOut", delay: 0.5, duration: 1 }}
         ></motion.div>
         )
-        <StaticImage
-          src="../assets/pictures/6142.jpg"
+        {
+          isAboveMediumScreens ? 
+          <StaticImage
+          src="../assets/images/tango.jpg"
           alt="main room"
           className="fixed top-0 left-0 h-screen"
           objectPosition="63% 0"
           objectFit="cover"
         />
+        :
+        <StaticImage
+        src="../assets/images/tango5.jpg"
+        alt="main room"
+        className="fixed top-0 left-0 h-screen"
+        objectPosition="0 0"
+        objectFit="cover"
+      />
+        }
+       
       </div>
       <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center lg:gap-10 z-10">
         <div className="flex flex-col items-center lg:items-start lg:pl-40  lg:w-1/3 ">
