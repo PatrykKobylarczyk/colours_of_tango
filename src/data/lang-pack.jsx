@@ -8,6 +8,7 @@ export const lang_EN = {
   menu_media_video: "Video",
   menu_media_gallery: "Gallery",
   menu_orchestra: "& Orchestra",
+  menu_concerts: "Concerts",
   menu_contact: "Contact",
   menu_shop: "Buy a CD",
   contact_title: "Contact",
@@ -23,8 +24,7 @@ export const lang_EN = {
     "Colours of tango takes you on an incredible journey to Argentina from the beginning of the last century, where one of the most colourful cultures in the world was born in the suburbs of Buenos Aires. Argentinian tango is not only a sensual and passionate dance but also a diverse and uplifting music created with passion and emotion.",
   about_description_paragraph2:
     "Two young musicians from Łódź (in Poland) and Argentinian singer Oscar Ovejero were connected by a love of tango, the outcome of which is the mutual artistic project Colours of tango.",
-  about_description_paragraph3:
-    `Oscar Ernesto Ovejero, is a native-born inhabitant of Buenos Aires with tango running through his veins. One can hear the essence of tango in its purest form in his singing, which is natural and full of passion. His voice is accompanied by a duo of young instrumentalists educated at music academies in Poland and Austria – Aneta Salwińska (harp) and Konrad Salwiński (accordion) – musicians who have a highly successful track record at (both) home and abroad, and who use the richness of sound in their instruments to present their own arrangements of the works of the old tango masters. Inspired by Piazzolla’s, Villoldo’s and Gardel’s music, they have revealeda wide range of interpretations – or colours of tango – to audiences in Poland, Austria, Germany and Great Britain and havebeen honoured with an Academia Nacional del Tango certificate.`,
+  about_description_paragraph3: `Oscar Ernesto Ovejero, is a native-born inhabitant of Buenos Aires with tango running through his veins. One can hear the essence of tango in its purest form in his singing, which is natural and full of passion. His voice is accompanied by a duo of young instrumentalists educated at music academies in Poland and Austria – Aneta Salwińska (harp) and Konrad Salwiński (accordion) – musicians who have a highly successful track record at (both) home and abroad, and who use the richness of sound in their instruments to present their own arrangements of the works of the old tango masters. Inspired by Piazzolla’s, Villoldo’s and Gardel’s music, they have revealeda wide range of interpretations – or colours of tango – to audiences in Poland, Austria, Germany and Great Britain and havebeen honoured with an Academia Nacional del Tango certificate.`,
   about_oscar_name: "Oscar Ernesto Ovejero",
   about_oscar_paragraph1:
     "Was born in Buenos Aires to a family of musical traditions with Spanish and Indian influences – of the Quechua tribes. He is a graduate of Conservatorio de Música Juan Pedro Esnaola in Buenos Aires in percussion. He studied singing with Prof. Lilian Duarte, and, after his arrival in Europe, collaborated with a tenor, Enrique Adrados, in Salzburg. As a natural vocalist and guitarist, he specializes in South American music – its style and rhythms – Argentinian, in particular, with Carlos Gardel and Edmundo Rivero as his greatest authorities among singers of traditional tango.",
@@ -45,17 +45,20 @@ export const lang_EN = {
   about_konrad_paragraph1:
     "Began to play the accordion at the age of 7. In 2011 he graduated from Music Academy in Łódź under the supervision of Prof. Zbigniew Ignaczewski. He has also studied at Universität für Musik und darstellende Kunst in Graz (Austria) under Prof. Janne Rättyä. He has participated in numerous International Music Courses where he has perfected his skills alongside some of the most outstanding teachers from Poland and abroad.",
   about_konrad_paragraph2:
-    'He has won awards at numerous Polish and international music contests including Vilnius (Latvia), Vienna (Austria), Klingenthal (Germany), Castelfidardo (Italy), Poprad, Danubian Streda (Slovakia), Moravske Toplice (Slovenia), Pula (Croatia), Madrid (Spain) and Caernarfon (Wales).',
+    "He has won awards at numerous Polish and international music contests including Vilnius (Latvia), Vienna (Austria), Klingenthal (Germany), Castelfidardo (Italy), Poprad, Danubian Streda (Slovakia), Moravske Toplice (Slovenia), Pula (Croatia), Madrid (Spain) and Caernarfon (Wales).",
   about_konrad_paragraph3:
     "In 2000, 2006, and 2008, he was a scholar of the Ministry of Culture and National Heritage, and, in 2007, he became a laureate of the 4th edition of “Young Poland” – through the Ministry of Culture and National Heritage scholarship programme.In 2008 and 2011, he was a scholar at Łódź Voivodship Marshall. He regularly performs in and around his home city of Łódź as well as in other cities in Poland and abroad. At present, he teaches at the Public School of Music in Zgierz and his students are successful at national and international music competitions",
   about_more: "more...",
   about_less: "less...",
   buy_cd: "Want to hear more?",
   buy_cd_contact: "Contact us to buy a CD!",
-  orchestra1: "Colours of Tango & Orchestra is an artistic project where the Colours of Tango musicians are accompanied by a chamber orchestra and professional dance couples.",
-  orchestra2: "The orchestral sound is enriched by the combination of harp and accordion, creating a cohesive whole dialogue with the soloists, and enhancing the drama while adding new colors to this musical and dance spectacle.",
-  orchestra3: "The ensemble exclusively uses its own original orchestral arrangements and scores.",
-  orchestra4: "watch videos"
+  orchestra1:
+    "Colours of Tango & Orchestra is an artistic project where the Colours of Tango musicians are accompanied by a chamber orchestra and professional dance couples.",
+  orchestra2:
+    "The orchestral sound is enriched by the combination of harp and accordion, creating a cohesive whole dialogue with the soloists, and enhancing the drama while adding new colors to this musical and dance spectacle.",
+  orchestra3:
+    "The ensemble exclusively uses its own original orchestral arrangements and scores.",
+  orchestra4: "watch videos",
 };
 
 export const lang_PL = {
@@ -67,6 +70,7 @@ export const lang_PL = {
   menu_media_video: "Wideo",
   menu_media_gallery: "Galeria",
   menu_orchestra: "& Orchestra",
+  menu_concerts: "Koncerty",
   menu_contact: "Kontakt",
   menu_shop: "Kup płytę",
   contact_title: "Kontakt",
@@ -104,19 +108,17 @@ export const lang_PL = {
   about_konrad_paragraph1:
     "Naukę gry na akordeonie rozpoczął w wieku 7 lat. W 2011 roku ukończył Akademię Muzyczną w Łodzi w klasie prof. Z. Ignaczewskiego. Studiował także w Universität für Musik und darstellende Kunst w Grazu (Austria) w klasie prof. Janne Rättyä. Wielokrotnie uczestniczył w Międzynarodowych Kursach Muzycznych, gdzie doskonalił swoje umiejętności pod okiem najznakomitszych pedagogów z Polski i świata.",
   about_konrad_paragraph2:
-    'Jest laureatem wielu nagród ogólnopolskich i międzynarodowych konkursów muzycznych, między innymi w Wilnie (Litwa), Wiedniu (Austria), Klingenthal (Niemcy), Castelfidardo (Włochy), Popradzie, Dunajskiej Stredzie (Słowacja), Moravskich Toplicach (Słowenia), Puli (Chorwacja), Madrycie (Hipszania), Caernarfon (Walia).',
-  about_konrad_paragraph3:
-    `W 2000, 2006 i 2008 r. był stypendystą Ministra Kultury i Dziedzictwa Narodowego, w roku 2007 został laureatem IV edycji programu stypendialnego Ministra Kultury i Dziedzictwa Narodowego "Młoda Polska", a w 2008 oraz 2011 roku stypendystą Marszałka Województwa Łódzkiego. Często koncertuje w Łodzi i regionie łódzkim, a także innych miastach w Polsce i na świecie. Obecnie prowadzi klasę akordeonu w Państwowej Szkole Muzycznej I i II stopnia w Zgierzu, a jego podopieczni odnoszą sukcesy na ogólnopolskich i międzynarodowych konkursach muzycznych.`,
+    "Jest laureatem wielu nagród ogólnopolskich i międzynarodowych konkursów muzycznych, między innymi w Wilnie (Litwa), Wiedniu (Austria), Klingenthal (Niemcy), Castelfidardo (Włochy), Popradzie, Dunajskiej Stredzie (Słowacja), Moravskich Toplicach (Słowenia), Puli (Chorwacja), Madrycie (Hipszania), Caernarfon (Walia).",
+  about_konrad_paragraph3: `W 2000, 2006 i 2008 r. był stypendystą Ministra Kultury i Dziedzictwa Narodowego, w roku 2007 został laureatem IV edycji programu stypendialnego Ministra Kultury i Dziedzictwa Narodowego "Młoda Polska", a w 2008 oraz 2011 roku stypendystą Marszałka Województwa Łódzkiego. Często koncertuje w Łodzi i regionie łódzkim, a także innych miastach w Polsce i na świecie. Obecnie prowadzi klasę akordeonu w Państwowej Szkole Muzycznej I i II stopnia w Zgierzu, a jego podopieczni odnoszą sukcesy na ogólnopolskich i międzynarodowych konkursach muzycznych.`,
   about_more: "więcej...",
   about_less: "mniej...",
   buy_cd: "Masz apetyt na więcej?",
   buy_cd_contact: "Napisz do nas i kup płytę!",
-  orchestra1: "Colours of Tango & Orchestra to projekt artystyczny, w którym muzykom Colours of Tango towarzyszy orkiestra kameralna oraz profesjonalne pary taneczne.",
-  orchestra2: "Orkiestrowe brzmienie dopełnia zestawienie harfy z akordeonem tworząc spójną całość, dialoguje z solistami, a także potęguje dramaturgię i dodaje nowych barw temu muzyczno-tanecznemu widowisku.",
-  orchestra3: "Zespół korzysta wyłącznie z własnych, autorskich aranżacji orkiestrowych i partytur.",
-  orchestra4: "zobacz wideo"
-
-  
-  
-  
+  orchestra1:
+    "Colours of Tango & Orchestra to projekt artystyczny, w którym muzykom Colours of Tango towarzyszy orkiestra kameralna oraz profesjonalne pary taneczne.",
+  orchestra2:
+    "Orkiestrowe brzmienie dopełnia zestawienie harfy z akordeonem tworząc spójną całość, dialoguje z solistami, a także potęguje dramaturgię i dodaje nowych barw temu muzyczno-tanecznemu widowisku.",
+  orchestra3:
+    "Zespół korzysta wyłącznie z własnych, autorskich aranżacji orkiestrowych i partytur.",
+  orchestra4: "zobacz wideo",
 };
