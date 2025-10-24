@@ -15,11 +15,12 @@ import { useRecoilState } from "recoil";
 import { languageState } from "../atoms/atom";
 
 // DATA
-import { lang_EN } from "../data/lang-pack";
+import { concerts } from "../data/concertsData";
 import { lang_PL } from "../data/lang-pack";
 import Loader from "../components/Loader";
 import GalleryRow from "../components/GalleryRow";
 import ImageCarousel from "../components/ImageCarousel";
+import ConcertTable from "../components/ConcertTable";
 
 const Concerts = () => {
   useEffect(() => {
@@ -61,7 +62,7 @@ const Concerts = () => {
       {/* BACKGROUND  */}
       <div className="fixed overflow-hidden top-0 right-0 w-full">
         <StaticImage
-          src="../assets/pictures/6292.jpg"
+          src="../assets/images/orchester3.jpg"
           alt="main room"
           className="fixed w-full h-screen -z-[2]"
         />
@@ -89,25 +90,27 @@ const Concerts = () => {
             </motion.div>
           ))}
         </motion.div>
-        {/* <motion.div
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           viewport={{ once: true }}
           variants={item}
           transition={{ delay: 2, staggerChildren: 0.1, delayChildren: 0.5 }}
         >
-          <GalleryRow
-            data={data}
-            handleImageModal={handleImageModal}
-            setShowModal={setShowModal}
-          />
-        </motion.div> */}
+          <div className="grid place-items-center grid-cols-1 md:grid-cols-3 gap-2 sm:gap-5 overflow-hidden">
+            {concerts.map((concert, i) => (
+              <motion.div key={i} variants={item}>
+                <ConcertTable concert={concert} />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </section>
 
       {/* BLENDS */}
-      <div className=" fixed left-0 top-0 w-full h-[20vh] bg-gradient-to-b from-black z-10"></div>
-      <div className=" fixed left-0 bottom-0 w-full h-[10vh] z-10"></div>
-      <Head title="Colours of Tango - Gallery" />
+      {/* <div className=" fixed left-0 top-0 w-full h-[20vh] bg-gradient-to-b from-black z-10"></div>
+      <div className=" fixed left-0 bottom-0 w-full h-[10vh] z-10"></div> */}
+      <Head title="Colours of Tango - Concerts" />
     </div>
   );
 };
