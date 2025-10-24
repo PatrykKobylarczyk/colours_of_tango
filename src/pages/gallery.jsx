@@ -18,7 +18,6 @@ import { useRecoilState } from "recoil";
 import { languageState } from "../atoms/atom";
 
 const Gallery = ({ data }) => {
-
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
@@ -131,16 +130,9 @@ export const query = graphql`
     allFile(
       filter: {
         extension: { regex: "/(jpg)/" }
-        name: {
-          nin: [
-            "tn1"
-            "tn2"
-            "tn4"
-            "favicon"
-          ]
-        }
-      },
-      sort: {name: ASC}
+        name: { nin: ["tn1", "tn2", "tn4", "favicon"] }
+      }
+      sort: { name: ASC }
     ) {
       edges {
         node {

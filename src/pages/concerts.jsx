@@ -5,10 +5,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 
 //COMPONENTS
-import AboutColoursContent from "../components/AboutColoursContent";
-import AboutAnetaContent from "../components/AboutAnetaContent";
-import AboutKonradContent from "../components/AboutKonradContent";
-import AboutOscarContent from "../components/AboutOscarContent";
 import Head from "../components/Head";
 
 // HOOKS
@@ -22,6 +18,8 @@ import { languageState } from "../atoms/atom";
 import { lang_EN } from "../data/lang-pack";
 import { lang_PL } from "../data/lang-pack";
 import Loader from "../components/Loader";
+import GalleryRow from "../components/GalleryRow";
+import ImageCarousel from "../components/ImageCarousel";
 
 const Concerts = () => {
   useEffect(() => {
@@ -33,30 +31,27 @@ const Concerts = () => {
 
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [language] = useRecoilState(languageState);
-  const [showMoreDuo, setShowMoreDuo] = useState(false);
-  const [showMoreAneta, setShowMoreAneta] = useState(false);
-  const [showMoreKonrad, setShowMoreKonrad] = useState(false);
-  const [showMoreOscar, setShowMoreOscar] = useState(false);
+
+  //Title Animation
+  const lang_EN = ["C", "o", "n", "c", "e", "r", "t", "s"];
+  const lang_PL = ["K", "o", "n", "c", "e", "r", "t", "y"];
 
   const lang = language === "PL" ? lang_EN : lang_PL;
 
-  const handleShowMore = (name) => {
-    switch (name) {
-      case "duo":
-        setShowMoreDuo((prev) => !prev);
-        break;
-      case "aneta":
-        setShowMoreAneta((prev) => !prev);
-        break;
-      case "konrad":
-        setShowMoreKonrad((prev) => !prev);
-        break;
-      case "oscar":
-        setShowMoreOscar((prev) => !prev);
-        break;
-      default:
-        console.log("Opps");
-    }
+  const container = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 1.3,
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
+  const item = {
+    hidden: { x: 20, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
   };
 
   return (
@@ -80,114 +75,39 @@ const Concerts = () => {
       </div>
 
       {/* CONTENT */}
-      <section className="absolute left-1/2 -translate-x-1/2 w-full md:max-w-6xl py-20 lg:py-32 px-10 mt-[55vh] z-[5]">
-        <h1 className="text-3xl lg:text-4xl font-bold mb-12">
-          {lang.about_title}
-        </h1>
-        <p>{lang.about_description_paragraph1}</p>
-        {isAboveMediumScreens ? (
-          <AboutColoursContent lang={lang} />
-        ) : (
-          showMoreDuo && <AboutColoursContent lang={lang} />
-        )}
-        {!isAboveMediumScreens && (
-          <button className="mt-5" onClick={() => handleShowMore("duo")}>
-            {showMoreDuo ? lang.about_less : lang.about_more}
-          </button>
-        )}
-
-        {/* Oscar */}
-        {/* <div className="mt-20 lg:mt-40">
-          <div className="flex flex-col md:flex-row items-end w-full gap-5">
-            {!isAboveMediumScreens && (
-              <h1 className="w-full md:w-1/2 text-2xl md:text-4xl font-bold md:text-left">
-                {lang.about_oscar_name}
-              </h1>
-            )}
-            <StaticImage
-              src="../assets/pictures/6513.jpg"
-              alt="Oscar Ernesto Ovejero"
-              className="w-full md:w-1/2"
-            />
-            {isAboveMediumScreens && (
-              <h1 className="w-full md:w-1/2 text-2xl md:text-4xl font-bold md:text-left">
-                {lang.about_oscar_name}
-              </h1>
-            )}
-          </div>
-          <p className="mt-10 lg:mt-10">{lang.about_oscar_paragraph1}</p>
-          {isAboveMediumScreens ? (
-            <AboutOscarContent lang={lang} />
-          ) : (
-            showMoreOscar && <AboutOscarContent lang={lang} />
-          )}
-          {!isAboveMediumScreens && (
-            <button className="mt-5" onClick={() => handleShowMore("oscar")}>
-              {showMoreOscar ? lang.about_less : lang.about_more}
-            </button>
-          )}
-        </div> */}
-
-        {/* Aneta */}
-        {/* <div className="mt-20 lg:mt-40">
-          <div className="flex flex-col md:flex-row items-end w-full gap-5">
-            <h1 className="w-full md:w-1/2 text-2xl md:text-4xl font-bold md:text-right">
-              {lang.about_aneta_name}
-            </h1>
-            <StaticImage
-              src="../assets/pictures/6326.jpg"
-              alt="Aneta Salwińska"
-              className="w-full md:w-1/2 brightness-110"
-            />
-          </div>
-          <p className="mt-10 lg:mt-10">{lang.about_aneta_paragraph1}</p>
-          {isAboveMediumScreens ? (
-            <AboutAnetaContent lang={lang} />
-          ) : (
-            showMoreAneta && <AboutAnetaContent lang={lang} />
-          )}
-          {!isAboveMediumScreens && (
-            <button className="mt-5" onClick={() => handleShowMore("aneta")}>
-              {showMoreAneta ? lang.about_less : lang.about_more}
-            </button>
-          )}
-        </div> */}
-
-        {/* Konrad */}
-        {/* <div className="my-20 lg:my-40">
-          <div className="flex flex-col md:flex-row items-end w-full gap-5">
-            {!isAboveMediumScreens && (
-              <h1 className="w-full md:w-1/2 text-2xl md:text-4xl font-bold md:text-left">
-                {lang.about_konrad_name}
-              </h1>
-            )}
-            <StaticImage
-              src="../assets/pictures/6437.jpg"
-              alt="Konrad Salwiński"
-              className="w-full md:w-1/2"
-            />
-            {isAboveMediumScreens && (
-              <h1 className="w-full md:w-1/2 text-2xl md:text-4xl font-bold md:text-left">
-                {lang.about_konrad_name}
-              </h1>
-            )}
-          </div>
-          <p className="mt-10 lg:mt-10">{lang.about_konrad_paragraph1}</p>
-          {isAboveMediumScreens ? (
-            <AboutKonradContent lang={lang} />
-          ) : (
-            showMoreKonrad && <AboutKonradContent lang={lang} />
-          )}
-          {!isAboveMediumScreens && (
-            <button className="mt-5" onClick={() => handleShowMore("konrad")}>
-              {showMoreKonrad ? lang.about_less : lang.about_more}
-            </button>
-          )}
-        </div> */}
+      <section className="w-full sm:max-w-[70vw] flex flex-col mx-auto px-5 lg:px-10 py-20 z-[19]">
+        <motion.div
+          className="flex justify-end text-4xl md:text-6xl font-bold z-[7] mt-[35vh] sm:mt-[40vh] mb-10"
+          initial="hidden"
+          animate="visible"
+          viewport={{ once: true }}
+          variants={container}
+        >
+          {lang.map((letter, i) => (
+            <motion.div key={i} variants={item}>
+              {letter}
+            </motion.div>
+          ))}
+        </motion.div>
+        {/* <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          viewport={{ once: true }}
+          variants={item}
+          transition={{ delay: 2, staggerChildren: 0.1, delayChildren: 0.5 }}
+        >
+          <GalleryRow
+            data={data}
+            handleImageModal={handleImageModal}
+            setShowModal={setShowModal}
+          />
+        </motion.div> */}
       </section>
+
+      {/* BLENDS */}
       <div className=" fixed left-0 top-0 w-full h-[20vh] bg-gradient-to-b from-black z-10"></div>
-      <div className=" fixed left-0 bottom-0 w-full h-[20vh] bg-gradient-to-t from-black z-10"></div>
-      <Head title="Colours of Tango - About" />
+      <div className=" fixed left-0 bottom-0 w-full h-[10vh] z-10"></div>
+      <Head title="Colours of Tango - Gallery" />
     </div>
   );
 };

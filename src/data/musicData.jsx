@@ -8,24 +8,18 @@ export const musicData = [
     id: 1,
     author: "Á. Villoldo",
     title: "El choclo",
-    music: El_choclo
+    music: El_choclo,
   },
   {
     id: 2,
     author: "H. Stamponi",
     title: "Flor de lino",
-    music: Flor_de_lino
+    music: Flor_de_lino,
   },
   {
     id: 3,
     author: "P. Laurenz",
     title: "Milonga de mis amores",
-    music: Milonga_de_mis_amores
+    music: Milonga_de_mis_amores,
   },
-  // {
-  //   id: 4,
-  //   author: "K. Salwiński",
-  //   title: "Estrella de medianoche",
-  //   music: Estrella_de_medianoche
-  // },
 ];
