@@ -38,7 +38,7 @@ export const concerts = [
   {
     id: 6,
     city: "Olsztyn",
-    place: "Sala koncertowa Filharmonii Warmińsko-Mazurskiej",
+    place: "Filharmonia Warmińsko-Mazurska",
     date: "14 listopada 2025",
   },
   {

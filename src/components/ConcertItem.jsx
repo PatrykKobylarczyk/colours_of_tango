@@ -22,9 +22,9 @@ const item = {
 
 const ConcertItem = ({ city, place, date, onBuyClick }) => {
   return (
-    <div className="item-container w-full max-w-[500px] bg-black text-white border border-gray-300 shadow-md cursor-default overflow-hidden uppercase">
+    <div className="item-container w-full max-w-[500px] h-auto md:h-[450px] bg-black text-white border border-gray-300 shadow-md cursor-default overflow-hidden uppercase flex flex-col">
       {/* Zdjęcie z overlayem */}
-      <div className="relative h-56 overflow-hidden">
+      <div className="relative h-56 overflow-hidden shrink-0">
         <StaticImage
           src="../assets/images/ticket.jpg"
           alt={place}
@@ -36,13 +36,15 @@ const ConcertItem = ({ city, place, date, onBuyClick }) => {
       </div>
 
       {/* Treść */}
-      <div className="p-6">
-        <div className="text-xl font-bold uppercase mb-2">{place}</div>
+      <div className="p-6 flex-grow">
+        <div className="text-xl font-bold uppercase mb-2 leading-tight break-words">
+          {place}
+        </div>
         <div className="text-base italic mb-1">{city}</div>
       </div>
 
       {/* Data + Button */}
-      <div className="border-t border-gray-300 px-6 py-6 text-sm text-gray-100 flex justify-between items-center">
+      <div className="border-t border-gray-300 px-6 py-6 text-sm text-gray-100 flex justify-between items-center shrink-0">
         <span>{date}</span>
         <button
           onClick={onBuyClick}
