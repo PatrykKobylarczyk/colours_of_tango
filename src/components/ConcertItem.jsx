@@ -20,6 +20,59 @@ const item = {
   visible: { opacity: 1 },
 };
 
+const concertListWithFilters = [
+  {
+    name: "Kup Bilecik",
+    link: "https://www.kupbilecik.pl/baza/17707/Colours+of+Tango+%26+Orchestra/",
+    cities: [
+      "Gorzów Wielkopolski",
+      "Katowice",
+      "Lublin",
+      "Bielsko-Biała",
+      "Szczecin",
+      "Kraków",
+      "Rzeszów",
+      "Olsztyn",
+    ],
+  },
+  {
+    name: "Biletyna",
+    link: "https://biletyna.pl/koncert/Colours-of-Tango-Orchestra",
+    cities: [
+      "Gorzów Wielkopolski",
+      "Katowice",
+      "Lublin",
+      "Bielsko-Biała",
+      "Szczecin",
+      "Kraków",
+      "Rzeszów",
+    ],
+  },
+  {
+    name: "eBilet",
+    link: "https://www.ebilet.pl/klasyka/balet-taniec/colours-of-tango-orchestra",
+    cities: [
+      "Gorzów Wielkopolski",
+      "Katowice",
+      "Lublin",
+      "Bielsko-Biała",
+      "Szczecin",
+      "Kraków",
+      "Rzeszów",
+    ],
+  },
+  {
+    name: "Eventim",
+    link: "https://www.eventim.pl/artist/colours-of-tango/?affiliate=APL",
+    cities: ["Katowice", "Lublin", "Bielsko-Biała", "Szczecin", "Kraków"],
+  },
+  {
+    name: "Ticketmaster",
+    link: "https://www.ticketmaster.pl/artist/colours-of-tango-orchestra-bilety/1333283",
+    cities: ["Katowice", "Lublin", "Szczecin", "Kraków"],
+  },
+];
+
 const ConcertItem = ({ city, place, date, onBuyClick }) => {
   return (
     <div className="item-container w-full max-w-[500px] h-auto md:h-[450px] bg-black text-white border border-gray-300 shadow-md cursor-default overflow-hidden uppercase flex flex-col">
@@ -58,6 +111,10 @@ const ConcertItem = ({ city, place, date, onBuyClick }) => {
 };
 
 const TicketModal = ({ city, place, onClose }) => {
+  const filteredLinks = concertListWithFilters.filter(
+    (entry) => entry.cities.includes("all") || entry.cities.includes(city)
+  );
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
       <div className="bg-black text-white border border-gray-300 shadow-lg max-w-[600px] w-full p-14 uppercase relative">
@@ -77,20 +134,18 @@ const TicketModal = ({ city, place, onClose }) => {
 
         {/* Linki do bileterii */}
         <ul className="space-y-4">
-          {["Bileteria 1", "Bileteria 2", "Bileteria 3", "Bileteria 4"].map(
-            (label, i) => (
-              <li key={i}>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block border border-gray-300 bg-black bg-opacity-60 text-white px-4 py-2 font-semibold uppercase tracking-wide transition-colors duration-300 hover:bg-[#d50006] hover:text-white rounded-none text-center"
-                >
-                  {label}
-                </a>
-              </li>
-            )
-          )}
+          {filteredLinks.map((entry, i) => (
+            <li key={i}>
+              <a
+                href={entry.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block border border-gray-300 bg-black bg-opacity-60 text-white px-4 py-2 font-semibold uppercase tracking-wide transition-colors duration-300 hover:bg-[#d50006] hover:text-white rounded-none text-center"
+              >
+                {entry.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
