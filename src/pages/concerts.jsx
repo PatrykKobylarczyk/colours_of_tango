@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-
-//LIBS'
 import { motion } from "framer-motion";
 
-//COMPONENTS
+// COMPONENTS
 import Head from "../components/Head";
+import Loader from "../components/Loader";
+import ConcertList from "../components/ConcertItem";
 
 // HOOKS
 import useMediaQuery from "../hooks/useMediaQuery";
@@ -14,25 +14,16 @@ import useMediaQuery from "../hooks/useMediaQuery";
 import { useRecoilState } from "recoil";
 import { languageState } from "../atoms/atom";
 
-// DATA
-import { concerts } from "../data/concertsData";
-import { lang_PL } from "../data/lang-pack";
-import Loader from "../components/Loader";
-import GalleryRow from "../components/GalleryRow";
-import ImageCarousel from "../components/ImageCarousel";
-import ConcertTable from "../components/ConcertTable";
-
 const Concerts = () => {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      new LocomotiveScroll();
     })();
   }, []);
 
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [language] = useRecoilState(languageState);
-
   //Title Animation
   const lang_EN = ["C", "o", "n", "c", "e", "r", "t", "s"];
   const lang_PL = ["K", "o", "n", "c", "e", "r", "t", "y"];
@@ -45,11 +36,11 @@ const Concerts = () => {
       transition: {
         staggerChildren: 0.1,
         delayChildren: 1.3,
-        duration: 1,
         ease: "easeInOut",
       },
     },
   };
+
   const item = {
     hidden: { x: 20, opacity: 0 },
     visible: { x: 0, opacity: 1 },
@@ -59,24 +50,24 @@ const Concerts = () => {
     <div className="w-full relative page">
       <Loader />
 
-      {/* BACKGROUND  */}
-      <div className="fixed overflow-hidden top-0 right-0 w-full">
+      {/* BACKGROUND */}
+      <div className="fixed top-0 left-0 w-full h-screen overflow-hidden -z-[2]">
         <StaticImage
           src="../assets/images/orchester3.jpg"
           alt="main room"
-          className="fixed w-full h-screen -z-[2]"
+          className="w-full h-full object-cover"
         />
-
         <motion.div
-          className="fixed left-0 top-0 w-full h-screen bg-gradient-layout-darker z-0"
+          className="absolute inset-0 bg-gradient-layout-darker z-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ease: "easeInOut", delay: 0.8, duration: 1.2 }}
-        ></motion.div>
+        />
       </div>
 
       {/* CONTENT */}
-      <section className="w-full sm:max-w-[70vw] flex flex-col mx-auto px-5 lg:px-10 py-20 z-[19]">
+      <section className="relative z-10 w-full sm:max-w-[70vw] mx-auto px-5 lg:px-10 py-20 flex flex-col">
+        {/* Tytuł */}
         <motion.div
           className="flex justify-end text-4xl md:text-6xl font-bold z-[7] mt-[35vh] sm:mt-[40vh] mb-10"
           initial="hidden"
@@ -90,27 +81,18 @@ const Concerts = () => {
             </motion.div>
           ))}
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          viewport={{ once: true }}
-          variants={item}
-          transition={{ delay: 2, staggerChildren: 0.1, delayChildren: 0.5 }}
-        >
-          <div className="grid place-items-center grid-cols-1 md:grid-cols-3 gap-2 sm:gap-5 overflow-hidden">
-            {concerts.map((concert, i) => (
-              <motion.div key={i} variants={item}>
-                <ConcertTable concert={concert} />
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+
+        {/* Lista koncertów */}
+        <div className=" ">
+          <ConcertList />
+        </div>
       </section>
 
       {/* BLENDS */}
-      {/* <div className=" fixed left-0 top-0 w-full h-[20vh] bg-gradient-to-b from-black z-10"></div>
-      <div className=" fixed left-0 bottom-0 w-full h-[10vh] z-10"></div> */}
-      <Head title="Colours of Tango - Concerts" />
+      <div className="fixed top-0 left-0 w-full h-[20vh] bg-gradient-to-b from-black z-10" />
+      <div className="fixed bottom-0 left-0 w-full h-[10vh] z-10" />
+
+      <Head lang={`Colours of Tango - ${lang}`} />
     </div>
   );
 };
