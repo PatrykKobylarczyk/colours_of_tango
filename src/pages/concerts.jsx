@@ -53,7 +53,7 @@ const Concerts = () => {
       {/* BACKGROUND */}
       <div className="fixed top-0 left-0 w-full h-screen overflow-hidden -z-[2]">
         <StaticImage
-          src="../assets/images/orchester3.jpg"
+          src="../assets/images/orchester.jpg"
           alt="main room"
           className="w-full h-full object-cover"
         />
