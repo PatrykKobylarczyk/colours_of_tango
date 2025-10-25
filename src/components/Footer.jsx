@@ -23,6 +23,9 @@ const Footer = () => {
   const [isMusicInFooter, setIsMusicInFooter] = useRecoilState(musicInFooter);
   const [IsMusicInPlayer, setIsMusicInPlayer] = useRecoilState(musicInPlayer);
 
+  function getCurrentYear() {
+    return new Date().getFullYear();
+  }
 
   const changeLanguage = () => {
     setLanguage(language === "PL" ? "EN" : "PL");
@@ -30,7 +33,7 @@ const Footer = () => {
 
   const handlePlayMusicButton = () => {
     setIsMusicInFooter((prev) => !prev);
-    setIsMusicInPlayer(false)
+    setIsMusicInPlayer(false);
   };
 
   useEffect(() => {
@@ -83,7 +86,10 @@ const Footer = () => {
           <Button
             handleClick={handlePlayMusicButton}
             content={
-              <MusicButtonAudioSpectrum type="footer" isMusicInFooter={isMusicInFooter} />
+              <MusicButtonAudioSpectrum
+                type="footer"
+                isMusicInFooter={isMusicInFooter}
+              />
             }
             styles={"text-xs"}
           />
@@ -91,7 +97,7 @@ const Footer = () => {
       </div>
       {isAboveSmallScreens ? (
         <p className="text-[10px] font-light mt-5 mb-0">
-          © 2023 Colours of Tango
+          © {getCurrentYear()} Colours of Tango
         </p>
       ) : null}
     </footer>
