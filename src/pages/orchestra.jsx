@@ -78,7 +78,7 @@ const Orchestra = () => {
       {/* BACKGROUND */}
       <div className="fixed top-0 left-0 w-full h-screen overflow-hidden -z-[2]">
         <StaticImage
-          src="../assets/images/orchester.jpg"
+          src="../assets/images/TangoO.jpg"
           alt="main room"
           className="w-full h-full object-cover"
         />
