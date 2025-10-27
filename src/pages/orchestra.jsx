@@ -80,7 +80,7 @@ const Orchestra = () => {
         <StaticImage
           src="../assets/images/TangoO.jpg"
           alt="main room"
-          className="w-full h-full object-cover"
+          className=" w-full h-full object-cover"
         />
         <motion.div
           className="absolute inset-0 bg-gradient-layout-darker z-0"
