@@ -3,10 +3,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Duo Milonga - Harp and Accordion`,
-    description: `The accordion and harp duo - concerts, musical setting, corporate events, events`,
+    title: `Colours of tango`,
+    description: `Vocal, accordion and harp`,
     image: `src/assets/images/favicon.png`,
-    siteUrl: `https://www.duomilonga.com`,
+    siteUrl: `https://www.coloursoftango.com`,
   },
   plugins: [
     "gatsby-plugin-postcss",
