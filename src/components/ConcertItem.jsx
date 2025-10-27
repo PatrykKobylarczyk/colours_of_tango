@@ -128,14 +128,23 @@ const ConcertList = () => {
         variants={container}
         className="grid grid-cols-1 md:grid-cols-3 gap-6"
       >
-        {concerts.map((concert) => (
-          <motion.div key={concert.id} variants={item}>
-            <ConcertItem
-              {...concert}
-              onBuyClick={() => handleBuyClick(concert)}
-            />
-          </motion.div>
-        ))}
+        {concerts
+          .filter((concert) => {
+            const concertDate = new Date(concert.date);
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); // zerujemy czas
+            concertDate.setDate(concertDate.getDate() + 1); // dodajemy 1 dzień
+
+            return concertDate >= today;
+          })
+          .map((concert) => (
+            <motion.div key={concert.id} variants={item}>
+              <ConcertItem
+                {...concert}
+                onBuyClick={() => handleBuyClick(concert)}
+              />
+            </motion.div>
+          ))}
       </motion.div>
 
       {selectedConcert && (
