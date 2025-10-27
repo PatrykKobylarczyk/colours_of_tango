@@ -54,7 +54,7 @@ const IndexPage = () => {
   const harp = language === "PL" ? harp_en : harp_pl;
   const accordion = language === "PL" ? accordion_en : accordion_pl;
   const vocal = language === "PL" ? vocal_en : vocal_pl;
-  const contactUs = language === "PL" ? "Contact" : "Kontakt";
+  const contactUs = language === "PL" ? "Buy a ticket" : "Kup bilet";
 
   const container = {
     hidden: {},
@@ -147,7 +147,7 @@ const IndexPage = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 3.2 }}
         >
-          <Link to="/contact">{contactUs}</Link>
+          <Link to="/concerts">{contactUs}</Link>
         </motion.button>
       </div>
 
