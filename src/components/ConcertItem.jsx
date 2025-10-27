@@ -83,9 +83,9 @@ const ConcertItem = ({ city, place, date, onBuyClick }) => {
           alt={place}
           className="w-full h-full object-cover transform transition-transform duration-500 ease-out origin-left hover:scale-110"
         />
-        <div className="absolute bottom-0 right-0 bg-black bg-opacity-60 px-4 py-2 text-lg font-bold tracking-wide select-none">
+        {/* <div className="absolute bottom-0 right-0 bg-black bg-opacity-60 px-4 py-2 text-lg font-bold tracking-wide select-none">
           {city}
-        </div>
+        </div> */}
       </div>
 
       {/* Treść */}
