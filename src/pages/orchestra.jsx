@@ -10,13 +10,9 @@ import { languageState } from "../atoms/atom";
 // DATA
 import { lang_EN } from "../data/lang-pack";
 import { lang_PL } from "../data/lang-pack";
-import video from "../assets/movie/bg.mp4";
-import video_mobile from "../assets/movie/bg_mobile.mp4";
 import { FaArrowRight } from "react-icons/fa";
 // HOOKS
 import useMediaQuery from "../hooks/useMediaQuery";
-import VideoWindowOrchestra from "../components/VideoWindowOrchestra";
-import VideoModalOrchestra from "../components/VideoModalOrchestra";
 import { Link } from "gatsby";
 
 const Orchestra = () => {
@@ -133,17 +129,6 @@ const Orchestra = () => {
           </Link>
         </motion.div>
         <div className="w-fit h-40"></div>
-        {/* <motion.div
-          className="flex justify-end text-xs md:text-xl mt-20"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 3 }}
-        >
-          <VideoWindowOrchestra setShowModal={setShowModal} item={item} />
-        </motion.div>
-
-        {showModal && <VideoModalOrchestra setShowModal={setShowModal} />} */}
       </section>
       <div className=" fixed left-0 top-0 w-full h-[20vh] bg-gradient-to-b from-black z-10"></div>
       <div className=" fixed left-0 bottom-0 w-full h-[20vh] bg-gradient-to-t from-black z-10"></div>

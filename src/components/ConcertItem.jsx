@@ -3,7 +3,11 @@ import { concerts } from "../data/concertsData";
 import { concertLinks } from "../data/concertLinks";
 import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
-
+// STATE
+import { useRecoilState } from "recoil";
+import { languageState } from "../atoms/atom";
+//HOOKS
+import { formatDate } from "../hooks/dateFormatter";
 const container = {
   hidden: {},
   visible: {
@@ -22,6 +26,9 @@ const item = {
 };
 
 const ConcertItem = ({ city, place, date, onBuyClick }) => {
+  const [language] = useRecoilState(languageState);
+  const formattedDate = formatDate(date, language);
+
   return (
     <div className="item-container w-full max-w-[500px] h-auto md:h-[450px] bg-black text-white border border-gray-300 shadow-md cursor-default overflow-hidden uppercase flex flex-col">
       {/* Zdjęcie z overlayem */}
@@ -43,7 +50,7 @@ const ConcertItem = ({ city, place, date, onBuyClick }) => {
 
       {/* Data + Button */}
       <div className="border-t border-gray-300 px-6 py-6 text-sm text-gray-100 flex justify-between items-center shrink-0">
-        <span>{date}</span>
+        <span>{formattedDate}</span>
         <button
           onClick={onBuyClick}
           className="border border-gray-300 bg-black bg-opacity-60 text-white px-4 py-2 font-semibold uppercase tracking-wide transition-colors duration-300 hover:bg-[#d50006] hover:text-white rounded-none"
