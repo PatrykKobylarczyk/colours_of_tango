@@ -28,6 +28,7 @@ const item = {
 const ConcertItem = ({ city, place, date, onBuyClick }) => {
   const [language] = useRecoilState(languageState);
   const formattedDate = formatDate(date, language);
+  const buyTicket = language === "PL" ? "Buy tickets" : "Kup bilety";
 
   return (
     <div className="item-container w-full max-w-[500px] h-auto md:h-[450px] bg-black text-white border border-gray-300 shadow-md cursor-default overflow-hidden uppercase flex flex-col">
@@ -55,7 +56,7 @@ const ConcertItem = ({ city, place, date, onBuyClick }) => {
           onClick={onBuyClick}
           className="border border-gray-300 bg-black bg-opacity-60 text-white px-4 py-2 font-semibold uppercase tracking-wide transition-colors duration-300 hover:bg-[#d50006] hover:text-white rounded-none"
         >
-          Kup bilety
+          {buyTicket}
         </button>
       </div>
     </div>
