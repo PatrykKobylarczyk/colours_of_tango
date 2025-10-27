@@ -69,7 +69,7 @@ const Footer = () => {
           <SocialMedia />
           {isAboveSmallScreens ? null : (
             <p className="text-[10px] font-light mt-5 mb-0">
-              © 2023 Colours of Tango
+              © {getCurrentYear()} Colours of Tango
             </p>
           )}
         </div>
