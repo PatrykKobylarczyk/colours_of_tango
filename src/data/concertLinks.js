@@ -59,14 +59,14 @@ export const concertLinks = {
     Biletyna: "https://biletyna.pl/event/view/id/548250",
     eBilet: "https://sklep.ebilet.pl/164662861375734037",
   },
-  //   "Lublin": {
-  //     KupBilecik:
-  //       "https://www.kupbilecik.pl/imprezy/164884/Lublin/Colours+of+Tango+%26+Orchestra/",
-  //     Biletyna: "https://biletyna.pl/event/view/id/538453",
-  //     eBilet: "https://sklep.ebilet.pl/164662861375734028",
-  //     eventim:
-  //       "https://www.eventim.pl/event/colours-of-tango-orchestra-centrum-spotkania-kultur-w-lublinie-20292780/?affiliate=APL",
-  //     ticketmaster:
-  //       "https://www.ticketmaster.pl/event/colours-of-tango--orchestra-bilety/349729328",
-  //   },
+  Olsztyn: {
+    KupBilecik:
+      "https://www.kupbilecik.pl/imprezy/175256/Olsztyn/Colours+of+Tango+%26+Orchestra/",
+    // Biletyna: "https://biletyna.pl/event/view/id/538453",
+    // eBilet: "https://sklep.ebilet.pl/164662861375734028",
+    // eventim:
+    //   "https://www.eventim.pl/event/colours-of-tango-orchestra-centrum-spotkania-kultur-w-lublinie-20292780/?affiliate=APL",
+    // ticketmaster:
+    //   "https://www.ticketmaster.pl/event/colours-of-tango--orchestra-bilety/349729328",
+  },
 };

@@ -39,7 +39,7 @@ export const concerts = [
     id: 6,
     city: "Olsztyn",
     place: "Filharmonia Warmińsko-Mazurska",
-    date: "2025-11-14",
+    date: "2026-03-21",
   },
   {
     id: 7,
