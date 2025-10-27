@@ -25,7 +25,7 @@ export const concertLinks = {
     ticketmaster:
       "https://www.ticketmaster.pl/event/colours-of-tango--orchestra-bilety/349729328",
   },
-  BielskoBiała: {
+  "Bielsko-Biała": {
     KupBilecik:
       "https://www.kupbilecik.pl/imprezy/162049/Bielsko-Bia%C5%82a/Colours+of+Tango+%26+Orchestra/#",
     Biletyna: "https://biletyna.pl/event/view/id/525091",
@@ -59,7 +59,7 @@ export const concertLinks = {
     Biletyna: "https://biletyna.pl/event/view/id/548250",
     eBilet: "https://sklep.ebilet.pl/164662861375734037",
   },
-  //   Lublin: {
+  //   "Lublin": {
   //     KupBilecik:
   //       "https://www.kupbilecik.pl/imprezy/164884/Lublin/Colours+of+Tango+%26+Orchestra/",
   //     Biletyna: "https://biletyna.pl/event/view/id/538453",
