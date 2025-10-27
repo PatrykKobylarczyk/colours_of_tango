@@ -48,7 +48,7 @@ const ConcertItem = ({ city, place, date, onBuyClick }) => {
           onClick={onBuyClick}
           className="border border-gray-300 bg-black bg-opacity-60 text-white px-4 py-2 font-semibold uppercase tracking-wide transition-colors duration-300 hover:bg-[#d50006] hover:text-white rounded-none"
         >
-          Kup bilet
+          Kup bilety
         </button>
       </div>
     </div>
