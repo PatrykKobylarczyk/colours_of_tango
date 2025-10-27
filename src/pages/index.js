@@ -15,9 +15,14 @@ import { useRecoilState } from "recoil";
 import { languageState } from "../atoms/atom";
 import { Link } from "gatsby";
 
+//DATA
+import video from "../assets/movie/bg.mp4";
+import video_mobile from "../assets/movie/bg_mobile.mp4";
+
 const IndexPage = () => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
   const [language] = useRecoilState(languageState);
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   //Titles Animation
   const milonga = [
@@ -71,22 +76,24 @@ const IndexPage = () => {
   return (
     <div className="pages relative h-screen overflow-hidden">
       <Loader />
-      <main>
-        {isAboveSmallScreens ? (
-          <StaticImage
-            src="../assets/pictures/66412.jpg"
-            alt="colours of tango "
-            className=" h-full -z-50 brightness-[85%]"
-          />
-        ) : (
-          <StaticImage
-            src="../assets/pictures/mobile.jpg"
-            alt="main room"
-            className="h-full -z-50"
-            objectFit="cover"
-          />
-        )}
-      </main>
+      <div className="fixed overflow-hidden top-0 right-0 h-screen w-auto z-0">
+        <video
+          src={isAboveMediumScreens ? video : video_mobile}
+          type="video/mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-auto"
+        ></video>
+      </div>
+      <motion.div
+        className="fixed top-0 right-0 h-screen w-full bg-black z-1"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.4 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1, delay: 1 }}
+      ></motion.div>
       <div className="absolute left-0 top-0 w-full h-full bg-gradient-layout"></div>
       <div
         className={`absolute flex flex-col justify-end text-white left-1/2 -translate-x-1/2 md:left-[70%] ${

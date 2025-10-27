@@ -74,24 +74,21 @@ const Orchestra = () => {
   return (
     <div className={`w-full relative page`}>
       <Loader />
-      <div className="fixed overflow-hidden top-0 right-0 h-screen w-auto z-0">
-        <video
-          src={isAboveMediumScreens ? video : video_mobile}
-          type="video/mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-auto"
-        ></video>
+
+      {/* BACKGROUND */}
+      <div className="fixed top-0 left-0 w-full h-screen overflow-hidden -z-[2]">
+        <StaticImage
+          src="../assets/images/orchester.jpg"
+          alt="main room"
+          className="w-full h-full object-cover"
+        />
+        <motion.div
+          className="absolute inset-0 bg-gradient-layout-darker z-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeInOut", delay: 0.8, duration: 1.2 }}
+        />
       </div>
-      <motion.div
-        className="fixed top-0 right-0 h-screen w-full bg-black z-1"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.4 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, delay: 1 }}
-      ></motion.div>
       {/* CONTENT */}
       <section className="absolute top-0 left-1/2 -translate-x-1/2 w-full sm:max-w-[70vw] flex flex-col px-5 lg:px-10 py-20 ">
         <motion.div
