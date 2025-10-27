@@ -130,7 +130,9 @@ export const query = graphql`
     allFile(
       filter: {
         extension: { regex: "/(jpg)/" }
-        name: { nin: ["tn1", "tn2", "tn4", "favicon"] }
+        name: {
+          nin: ["tn1", "tn2", "tn4", "favicon", "ticket", "tango2", "tango4"]
+        }
       }
       sort: { name: ASC }
     ) {
