@@ -54,7 +54,7 @@ const IndexPage = () => {
   const harp = language === "PL" ? harp_en : harp_pl;
   const accordion = language === "PL" ? accordion_en : accordion_pl;
   const vocal = language === "PL" ? vocal_en : vocal_pl;
-  const contactUs = language === "PL" ? "Buy a ticket" : "Kup bilet";
+  const contactUs = language === "PL" ? "Buy tickets" : "Kup bilety";
 
   const container = {
     hidden: {},
