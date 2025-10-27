@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { concerts } from "../data/concertsData";
+import { concertLinks } from "../data/concertLinks";
 import { motion } from "framer-motion";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -20,59 +21,6 @@ const item = {
   visible: { opacity: 1 },
 };
 
-const concertListWithFilters = [
-  {
-    name: "Kup Bilecik",
-    link: "https://www.kupbilecik.pl/baza/17707/Colours+of+Tango+%26+Orchestra/",
-    cities: [
-      "Gorzów Wielkopolski",
-      "Katowice",
-      "Lublin",
-      "Bielsko-Biała",
-      "Szczecin",
-      "Kraków",
-      "Rzeszów",
-      "Olsztyn",
-    ],
-  },
-  {
-    name: "Biletyna",
-    link: "https://biletyna.pl/koncert/Colours-of-Tango-Orchestra",
-    cities: [
-      "Gorzów Wielkopolski",
-      "Katowice",
-      "Lublin",
-      "Bielsko-Biała",
-      "Szczecin",
-      "Kraków",
-      "Rzeszów",
-    ],
-  },
-  {
-    name: "eBilet",
-    link: "https://www.ebilet.pl/klasyka/balet-taniec/colours-of-tango-orchestra",
-    cities: [
-      "Gorzów Wielkopolski",
-      "Katowice",
-      "Lublin",
-      "Bielsko-Biała",
-      "Szczecin",
-      "Kraków",
-      "Rzeszów",
-    ],
-  },
-  {
-    name: "Eventim",
-    link: "https://www.eventim.pl/artist/colours-of-tango/?affiliate=APL",
-    cities: ["Katowice", "Lublin", "Bielsko-Biała", "Szczecin", "Kraków"],
-  },
-  {
-    name: "Ticketmaster",
-    link: "https://www.ticketmaster.pl/artist/colours-of-tango-orchestra-bilety/1333283",
-    cities: ["Katowice", "Lublin", "Szczecin", "Kraków"],
-  },
-];
-
 const ConcertItem = ({ city, place, date, onBuyClick }) => {
   return (
     <div className="item-container w-full max-w-[500px] h-auto md:h-[450px] bg-black text-white border border-gray-300 shadow-md cursor-default overflow-hidden uppercase flex flex-col">
@@ -83,9 +31,6 @@ const ConcertItem = ({ city, place, date, onBuyClick }) => {
           alt={place}
           className="w-full h-full object-cover transform transition-transform duration-500 ease-out origin-left hover:scale-110"
         />
-        {/* <div className="absolute bottom-0 right-0 bg-black bg-opacity-60 px-4 py-2 text-lg font-bold tracking-wide select-none">
-          {city}
-        </div> */}
       </div>
 
       {/* Treść */}
@@ -111,9 +56,7 @@ const ConcertItem = ({ city, place, date, onBuyClick }) => {
 };
 
 const TicketModal = ({ city, place, onClose }) => {
-  const filteredLinks = concertListWithFilters.filter(
-    (entry) => entry.cities.includes("all") || entry.cities.includes(city)
-  );
+  const links = concertLinks[city] || {};
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
@@ -134,18 +77,24 @@ const TicketModal = ({ city, place, onClose }) => {
 
         {/* Linki do bileterii */}
         <ul className="space-y-4">
-          {filteredLinks.map((entry, i) => (
-            <li key={i}>
-              <a
-                href={entry.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block border border-gray-300 bg-black bg-opacity-60 text-white px-4 py-2 font-semibold uppercase tracking-wide transition-colors duration-300 hover:bg-[#d50006] hover:text-white rounded-none text-center"
-              >
-                {entry.name}
-              </a>
-            </li>
-          ))}
+          {Object.entries(links).length > 0 ? (
+            Object.entries(links).map(([provider, url], i) => (
+              <li key={i}>
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block border border-gray-300 bg-black bg-opacity-60 text-white px-4 py-2 font-semibold uppercase tracking-wide transition-colors duration-300 hover:bg-[#d50006] hover:text-white rounded-none text-center"
+                >
+                  {provider}
+                </a>
+              </li>
+            ))
+          ) : (
+            <div className="text-center text-gray-400 text-sm italic">
+              Brak dostępnych biletów dla tego miasta.
+            </div>
+          )}
         </ul>
       </div>
     </div>

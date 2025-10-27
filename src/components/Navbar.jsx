@@ -68,7 +68,12 @@ const Navbar = () => {
             >
               <Link to="/about">{lang.menu_about}</Link>
             </motion.div>
-
+            <motion.div
+              transition={{ duration: 0.3, ease: [0.435, 0.135, 0.09, 0.83] }}
+              variants={projectVariant}
+            >
+              <Link to="/concerts">{lang.menu_concerts}</Link>
+            </motion.div>
             <motion.div
               transition={{ duration: 0.3, ease: [0.435, 0.135, 0.09, 0.83] }}
               variants={projectVariant}
@@ -94,12 +99,7 @@ const Navbar = () => {
             >
               <Link to="/orchestra">{lang.menu_orchestra}</Link>
             </motion.div>
-            <motion.div
-              transition={{ duration: 0.3, ease: [0.435, 0.135, 0.09, 0.83] }}
-              variants={projectVariant}
-            >
-              <Link to="/concerts">{lang.menu_concerts}</Link>
-            </motion.div>
+
             <motion.div
               transition={{ duration: 0.3, ease: [0.435, 0.135, 0.09, 0.83] }}
               variants={projectVariant}
@@ -171,6 +171,17 @@ const Navbar = () => {
                   }}
                   variants={projectVariant}
                 >
+                  <Link to="/concerts" onClick={() => setIsMenuToggled(false)}>
+                    {lang.menu_concerts}
+                  </Link>
+                </motion.div>
+                <motion.div
+                  transition={{
+                    duration: 0.3,
+                    ease: [0.435, 0.135, 0.09, 0.83],
+                  }}
+                  variants={projectVariant}
+                >
                   <Link to="/music" onClick={() => setIsMenuToggled(false)}>
                     {lang.menu_media_music}
                   </Link>
@@ -209,17 +220,7 @@ const Navbar = () => {
                     {lang.menu_orchestra}
                   </Link>
                 </motion.div>
-                <motion.div
-                  transition={{
-                    duration: 0.3,
-                    ease: [0.435, 0.135, 0.09, 0.83],
-                  }}
-                  variants={projectVariant}
-                >
-                  <Link to="/concerts" onClick={() => setIsMenuToggled(false)}>
-                    {lang.menu_concerts}
-                  </Link>
-                </motion.div>
+
                 <motion.div
                   transition={{
                     duration: 0.3,
