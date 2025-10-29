@@ -62,8 +62,8 @@ export const concertLinks = {
   Olsztyn: {
     KupBilecik:
       "https://www.kupbilecik.pl/imprezy/175256/Olsztyn/Colours+of+Tango+%26+Orchestra/",
-    // Biletyna: "https://biletyna.pl/event/view/id/538453",
-    // eBilet: "https://sklep.ebilet.pl/164662861375734028",
+    Biletyna: "https://biletyna.pl/koncert/Colours-of-Tango-Orchestra/Olsztyn",
+    eBilet: "https://sklep.ebilet.pl/164662861375734066",
     // eventim:
     //   "https://www.eventim.pl/event/colours-of-tango-orchestra-centrum-spotkania-kultur-w-lublinie-20292780/?affiliate=APL",
     // ticketmaster:
