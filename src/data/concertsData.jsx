@@ -37,12 +37,18 @@ export const concerts = [
   },
   {
     id: 6,
+    city: "Warszawa",
+    place: "Filharmonia Narodowa",
+    date: "2026-02-15",
+  },
+  {
+    id: 7,
     city: "Olsztyn",
     place: "Filharmonia Warmińsko-Mazurska",
     date: "2026-03-21",
   },
   {
-    id: 7,
+    id: 8,
     city: "Rzeszów",
     place: "Filharmonia Podkarpacka",
     date: "2026-03-28",
