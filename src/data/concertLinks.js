@@ -53,6 +53,16 @@ export const concertLinks = {
     ticketmaster:
       "https://www.ticketmaster.pl/event/colours-of-tango--orchestra-bilety/38546369",
   },
+  Warszawa: {
+    KupBilecik:
+      "https://www.kupbilecik.pl/imprezy/183472/Warszawa/Colours+of+Tango+%26+Orchestra/",
+    // Biletyna: "https://biletyna.pl/event/view/id/546887",
+    eBilet: "https://sklep.ebilet.pl/164662861375734068",
+    // eventim:
+    //   "https://www.eventim.pl/event/colours-of-tango-orchestra-ice-krakow-congress-centre-20359497/?affiliate=APL",
+    // ticketmaster:
+    //   "https://www.ticketmaster.pl/event/colours-of-tango--orchestra-bilety/38546369",
+  },
   Rzeszów: {
     KupBilecik:
       "https://www.kupbilecik.pl/imprezy/168825/Rzesz%C3%B3w/Colours+of+Tango+%26+Orchestra/",
