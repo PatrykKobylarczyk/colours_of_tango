@@ -68,6 +68,7 @@ export const concertLinks = {
       "https://www.kupbilecik.pl/imprezy/168825/Rzesz%C3%B3w/Colours+of+Tango+%26+Orchestra/",
     Biletyna: "https://biletyna.pl/event/view/id/548250",
     eBilet: "https://sklep.ebilet.pl/164662861375734037",
+    // eBilet: "https://sklep.ebilet.pl/164662861375734037",
   },
   Olsztyn: {
     KupBilecik:
