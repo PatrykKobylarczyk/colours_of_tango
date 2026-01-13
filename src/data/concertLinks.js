@@ -37,7 +37,7 @@ export const concertLinks = {
     KupBilecik:
       "https://www.kupbilecik.pl/imprezy/162681/Szczecin/Colours+of+Tango+%26+Orchestra/#",
     Biletyna: "https://biletyna.pl/event/view/id/525668",
-    eBilet: "https://sklep.ebilet.pl/164662861375734026:",
+    eBilet: "https://sklep.ebilet.pl/164662861375734026",
     eventim:
       "https://www.eventim.pl/event/colours-of-tango-orchestra-filharmonia-im-m-karlowicza-20136887/?affiliate=APL",
     ticketmaster:
@@ -56,7 +56,7 @@ export const concertLinks = {
   Warszawa: {
     KupBilecik:
       "https://www.kupbilecik.pl/imprezy/183472/Warszawa/Colours+of+Tango+%26+Orchestra/",
-    // Biletyna: "https://biletyna.pl/event/view/id/546887",
+    Biletyna: "https://biletyna.pl/event/view/id/618449",
     eBilet: "https://sklep.ebilet.pl/164662861375734068",
     // eventim:
     //   "https://www.eventim.pl/event/colours-of-tango-orchestra-ice-krakow-congress-centre-20359497/?affiliate=APL",
