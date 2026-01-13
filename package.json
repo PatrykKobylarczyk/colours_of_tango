@@ -12,8 +12,8 @@
   },
   "scripts": {
     "develop": "gatsby develop",
+    "build": "GATSBY_EXPERIMENTAL_LMDB_STORE=false gatsby build",
     "start": "gatsby develop",
-    "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
