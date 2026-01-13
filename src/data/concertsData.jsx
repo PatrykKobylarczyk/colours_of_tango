@@ -52,6 +52,5 @@ export const concerts = [
     city: "Rzeszów",
     place: "Filharmonia Podkarpacka",
     date: "2026-03-28",
-    // date: "2026-03-28",
   },
 ];
