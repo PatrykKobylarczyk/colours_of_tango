@@ -16,9 +16,9 @@ import VideoModal from "../components/VideoModal";
 import { useRecoilState } from "recoil";
 import { languageState } from "../atoms/atom";
 import Loader from "../components/Loader";
+// import Loader from "../components/Loader";
 
 const Video = () => {
-
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
