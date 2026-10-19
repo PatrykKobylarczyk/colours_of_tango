@@ -66,8 +66,8 @@ const About = () => {
       {/* BACKGROUND  */}
       <div className="fixed overflow-hidden top-0 right-0 w-full">
         <StaticImage
-          src="../assets/pictures/6292.jpg"
-          alt="main room"
+          src="../assets/pictures/4908.jpg"
+          alt="Colours of Tango on stage"
           className="fixed w-full h-screen -z-[2]"
         />
 

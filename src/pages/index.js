@@ -15,14 +15,9 @@ import { useRecoilState } from "recoil";
 import { languageState } from "../atoms/atom";
 import { Link } from "gatsby";
 
-//DATA
-import video from "../assets/movie/bg.mp4";
-import video_mobile from "../assets/movie/bg_mobile.mp4";
-
 const IndexPage = () => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
   const [language] = useRecoilState(languageState);
-  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   //Titles Animation
   const milonga = [
@@ -76,16 +71,15 @@ const IndexPage = () => {
   return (
     <div className="pages relative h-screen overflow-hidden">
       <Loader />
-      <div className="fixed overflow-hidden top-0 right-0 h-screen w-auto z-0">
-        <video
-          src={isAboveMediumScreens ? video : video_mobile}
-          type="video/mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-auto"
-        ></video>
+      <div className="fixed overflow-hidden top-0 right-0 h-screen w-full z-0">
+        <StaticImage
+          src="../assets/pictures/2634.jpg"
+          alt="Colours of Tango concert"
+          className="w-full h-screen"
+          objectFit="cover"
+          objectPosition="25% center"
+          loading="eager"
+        />
       </div>
       <motion.div
         className="fixed top-0 right-0 h-screen w-full bg-black z-1"
