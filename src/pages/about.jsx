@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import AboutColoursContent from "../components/AboutColoursContent";
 import AboutAnetaContent from "../components/AboutAnetaContent";
 import AboutKonradContent from "../components/AboutKonradContent";
-import AboutOscarContent from "../components/AboutOscarContent";
+import AboutCarlosContent from "../components/AboutCarlosContent";
 import Head from "../components/Head";
 
 // HOOKS
@@ -36,7 +36,7 @@ const About = () => {
   const [showMoreDuo, setShowMoreDuo] = useState(false);
   const [showMoreAneta, setShowMoreAneta] = useState(false);
   const [showMoreKonrad, setShowMoreKonrad] = useState(false);
-  const [showMoreOscar, setShowMoreOscar] = useState(false);
+  const [showMoreCarlos, setShowMoreCarlos] = useState(false);
 
   const lang = language === "PL" ? lang_EN : lang_PL;
 
@@ -51,8 +51,8 @@ const About = () => {
       case "konrad":
         setShowMoreKonrad((prev) => !prev);
         break;
-      case "oscar":
-        setShowMoreOscar((prev) => !prev);
+      case "carlos":
+        setShowMoreCarlos((prev) => !prev);
         break;
       default:
         console.log("Opps");
@@ -96,34 +96,34 @@ const About = () => {
           </button>
         )}
 
-        {/* Oscar */}
+        {/* Carlos */}
         <div className="mt-20 lg:mt-40">
           <div className="flex flex-col md:flex-row items-end w-full gap-5">
           {!isAboveMediumScreens && (
               <h1 className="w-full md:w-1/2 text-2xl md:text-4xl font-bold md:text-left">
-                {lang.about_oscar_name}
+                {lang.about_carlos_name}
               </h1>
             )}
             <StaticImage
-              src="../assets/pictures/6513.jpg"
-              alt="Oscar Ernesto Ovejero"
+              src="../assets/pictures/carlos.jpg"
+              alt="Carlos Habiague"
               className="w-full md:w-1/2"
             />
             {isAboveMediumScreens && (
               <h1 className="w-full md:w-1/2 text-2xl md:text-4xl font-bold md:text-left">
-                {lang.about_oscar_name}
+                {lang.about_carlos_name}
               </h1>
             )}
           </div>
-          <p className="mt-10 lg:mt-10">{lang.about_oscar_paragraph1}</p>
+          <p className="mt-10 lg:mt-10">{lang.about_carlos_paragraph1}</p>
           {isAboveMediumScreens ? (
-            <AboutOscarContent lang={lang} />
+            <AboutCarlosContent lang={lang} />
           ) : (
-            showMoreOscar && <AboutOscarContent lang={lang} />
+            showMoreCarlos && <AboutCarlosContent lang={lang} />
           )}
           {!isAboveMediumScreens && (
-            <button className="mt-5" onClick={() => handleShowMore("oscar")}>
-              {showMoreOscar ? lang.about_less : lang.about_more}
+            <button className="mt-5" onClick={() => handleShowMore("carlos")}>
+              {showMoreCarlos ? lang.about_less : lang.about_more}
             </button>
           )}
         </div>
