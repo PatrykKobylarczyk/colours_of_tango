@@ -25,7 +25,7 @@ const item = {
   visible: { opacity: 1 },
 };
 
-const ConcertItem = ({ city, place, date, onBuyClick }) => {
+const ConcertItem = ({ title, city, place, date, time, onBuyClick }) => {
   const [language] = useRecoilState(languageState);
   const formattedDate = formatDate(date, language);
   const buyTicket = language === "PL" ? "Buy tickets" : "Kup bilety";
@@ -47,11 +47,15 @@ const ConcertItem = ({ city, place, date, onBuyClick }) => {
           {place}
         </div>
         <div className="text-base italic mb-1">{city}</div>
+        {title && <div className="text-base mb-1">{title}</div>}
       </div>
 
       {/* Data + Button */}
       <div className="border-t border-gray-300 px-6 py-6 text-sm text-gray-100 flex justify-between items-center shrink-0">
-        <span>{formattedDate}</span>
+        <span>
+          {formattedDate}
+          {time && ` | ${time}`}
+        </span>
         <button
           onClick={onBuyClick}
           className="border border-gray-300 bg-black bg-opacity-60 text-white px-4 py-2 font-semibold uppercase tracking-wide transition-colors duration-300 hover:bg-[#d50006] hover:text-white rounded-none"
@@ -63,8 +67,8 @@ const ConcertItem = ({ city, place, date, onBuyClick }) => {
   );
 };
 
-const TicketModal = ({ city, place, onClose }) => {
-  const links = concertLinks[city] || {};
+const TicketModal = ({ city, place, links: concertOwnLinks, onClose }) => {
+  const links = concertOwnLinks || concertLinks[city] || {};
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
@@ -151,6 +155,7 @@ const ConcertList = () => {
         <TicketModal
           city={selectedConcert.city}
           place={selectedConcert.place}
+          links={selectedConcert.links}
           onClose={handleCloseModal}
         />
       )}
