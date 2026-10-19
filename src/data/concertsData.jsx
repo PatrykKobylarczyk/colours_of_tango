@@ -53,4 +53,37 @@ export const concerts = [
     place: "Filharmonia Podkarpacka",
     date: "2026-03-28",
   },
+  {
+    id: 9,
+    title: "Sylwester",
+    city: "Łódź",
+    place: "Filharmonia Łódzka",
+    date: "2026-12-31",
+    time: "19:00",
+    links: {
+      KupBilecik: "https://bkb.pl/223309-203c0",
+    },
+  },
+  {
+    id: 10,
+    title: "Sylwester",
+    city: "Łódź",
+    place: "Filharmonia Łódzka",
+    date: "2026-12-31",
+    time: "22:00",
+    links: {
+      KupBilecik: "https://bkb.pl/223310-f5d91",
+    },
+  },
+  {
+    id: 11,
+    title: "Dzień Kobiet",
+    city: "Gdańsk",
+    place: "Filharmonia Bałtycka",
+    date: "2027-03-08",
+    time: "19:00",
+    links: {
+      KupBilecik: "https://bkb.pl/222879-3e88f",
+    },
+  },
 ];
