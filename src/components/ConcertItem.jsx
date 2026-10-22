@@ -37,6 +37,7 @@ const ConcertItem = ({ title, city, place, date, time, onBuyClick }) => {
         <StaticImage
           src="../assets/images/ticket.jpg"
           alt={place}
+          objectPosition="50% 0%"
           className="w-full h-full object-cover transform transition-transform duration-500 ease-out origin-left hover:scale-110"
         />
       </div>
