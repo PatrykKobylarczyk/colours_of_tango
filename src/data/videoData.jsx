@@ -3,7 +3,15 @@ import tn2 from "../assets/pictures/tn2.png";
 import tn3 from "../assets/pictures/tn3.png";
 import tn4 from "../assets/pictures/tn4.png";
 import tn5 from "../assets/images/orchester4.jpg";
+import tn6 from "../assets/pictures/tn6.jpg";
 export const videoData = [
+  {
+    id: 6,
+    author: "Colours of Tango & Orchestra",
+    title: "21.12.2025 Cavatina Hall Bielsko-Biała",
+    url: "https://www.youtube.com/watch?v=wOw447RL8sw",
+    thumbnail: tn6,
+  },
   {
     id: 5,
     author: "Colours of Tango",
