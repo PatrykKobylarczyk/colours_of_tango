@@ -162,7 +162,7 @@ const About = () => {
               </h1>
             )}
             <StaticImage
-              src="../assets/pictures/6437.jpg"
+              src="../assets/pictures/2623.jpg"
               alt="Konrad Salwiński"
               className="w-full md:w-1/2"
             />
