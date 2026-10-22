@@ -135,7 +135,7 @@ const About = () => {
               {lang.about_aneta_name}
             </h1>
             <StaticImage
-              src="../assets/pictures/6326.jpg"
+              src="../assets/pictures/2385.jpg"
               alt="Aneta Salwińska"
               className="w-full md:w-1/2 brightness-110"
             />

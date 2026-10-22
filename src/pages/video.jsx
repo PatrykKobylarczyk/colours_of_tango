@@ -60,10 +60,10 @@ const Video = () => {
       {/* BACKGROUN */}
       <div className="h-screen w-full fixed left-0 top-0 -z-[2]">
         <StaticImage
-          src="../assets/pictures/6513.jpg"
+          src="../assets/pictures/2550.jpg"
           alt="main room"
           className="h-screen"
-          objectPosition={`${isAboveMediumScreens ? "right center" : "31% 0%"}`}
+          objectPosition={`${isAboveMediumScreens ? "right center" : "40% 50%"}`}
           objectFit="cover"
         />
       </div>
