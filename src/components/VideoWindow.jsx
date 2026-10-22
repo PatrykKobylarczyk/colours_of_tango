@@ -35,7 +35,7 @@ const VideoWindow = ({ setShowModal, title, thumbnail, id }) => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <Button content={<SlControlPlay className=" ml-1 text-white" />} />
         </div>
-        <img src={thumbnail} alt={title} className="w-[120%] h-full" />
+        <img src={thumbnail} alt={title} className="w-full aspect-video object-cover" />
       </div>
     </div>
   );

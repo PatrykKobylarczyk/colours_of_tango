@@ -41,8 +41,8 @@ const IndexPage = () => {
 
   const harp_en = `Aneta Salwińska - harp`;
   const harp_pl = `Aneta Salwińska - harfa`;
-  const accordion_en = `Konrad Salwiński - accordion`;
-  const accordion_pl = `Konrad Salwiński - akordeon`;
+  const accordion_en = `Konrad Salwiński - accordion/bandoneon`;
+  const accordion_pl = `Konrad Salwiński - akordeon/bandoneon`;
   const vocal_en = `Carlos Habiague - vocal`;
   const vocal_pl = `Carlos Habiague - wokal`;
 

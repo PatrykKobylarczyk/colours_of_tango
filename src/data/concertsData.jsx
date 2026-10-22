@@ -62,6 +62,8 @@ export const concerts = [
     time: "19:00",
     links: {
       KupBilecik: "https://bkb.pl/223309-203c0",
+      Biletyna: "https://biletyna.pl/event/view/id/713568",
+      eBilet: "https://sklep.ebilet.pl/164662861375734116",
     },
   },
   {
@@ -73,6 +75,8 @@ export const concerts = [
     time: "22:00",
     links: {
       KupBilecik: "https://bkb.pl/223310-f5d91",
+      Biletyna: "https://biletyna.pl/event/view/id/713569",
+      eBilet: "https://sklep.ebilet.pl/164662861375734117",
     },
   },
   {
@@ -84,6 +88,7 @@ export const concerts = [
     time: "19:00",
     links: {
       KupBilecik: "https://bkb.pl/222879-3e88f",
+      eBilet: "https://sklep.ebilet.pl/164662861375734115",
     },
   },
 ];
