@@ -90,7 +90,7 @@ const IndexPage = () => {
       ></motion.div>
       <div className="absolute left-0 top-0 w-full h-full bg-gradient-layout"></div>
       <div
-        className={`absolute flex flex-col justify-end text-white left-1/2 -translate-x-1/2 md:left-[70%] ${
+        className={`absolute flex flex-col justify-end text-white left-1/2 -translate-x-1/2 md:left-auto md:right-[8%] md:translate-x-0 ${
           isIOS ? "bottom-[20vh]" : "bottom-[24vh]"
         } md:top-[60vh] text-2xl md:text-3xl font-medium md:font-bold z-[7]`}
       >
@@ -108,7 +108,7 @@ const IndexPage = () => {
           ))}
         </motion.div>
         <motion.div
-          className="flex text-xs md:text-xl"
+          className="flex text-xs md:text-xl whitespace-nowrap"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -117,7 +117,7 @@ const IndexPage = () => {
           {vocal}
         </motion.div>
         <motion.div
-          className="flex text-xs md:text-xl"
+          className="flex text-xs md:text-xl whitespace-nowrap"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -127,7 +127,7 @@ const IndexPage = () => {
         </motion.div>
 
         <motion.div
-          className="flex text-xs md:text-xl"
+          className="flex text-xs md:text-xl whitespace-nowrap"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
