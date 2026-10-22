@@ -73,7 +73,7 @@ const Shop = () => {
                 src="../assets/pictures/cd.jpg"
                 alt="cd colours of tango"
                 className="w-full aspect-auto md:min-w-[400px] max-w-[400px]"
-                objectPosition="48% 50%"
+                objectPosition="63% 0"
                 objectFit="contain"
               />
             </motion.div>
