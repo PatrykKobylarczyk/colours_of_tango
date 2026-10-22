@@ -66,7 +66,7 @@ const About = () => {
       {/* BACKGROUND  */}
       <div className="fixed overflow-hidden top-0 right-0 w-full">
         <StaticImage
-          src="../assets/pictures/4908.jpg"
+          src="../assets/pictures/2591.jpg"
           alt="Colours of Tango on stage"
           className="fixed w-full h-screen -z-[2]"
         />
@@ -162,7 +162,7 @@ const About = () => {
               </h1>
             )}
             <StaticImage
-              src="../assets/pictures/6437.jpg"
+              src="../assets/pictures/2623.jpg"
               alt="Konrad Salwiński"
               className="w-full md:w-1/2"
             />
