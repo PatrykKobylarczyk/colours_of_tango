@@ -54,10 +54,10 @@ const Shop = () => {
           objectFit="cover"
         />
       </div>
-      <div className="fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center lg:gap-10 z-10">
+      <div className="fixed top-0 left-0 w-full h-screen flex flex-col justify-center items-center pb-[20vh] md:pb-0 lg:gap-10 z-10">
         <AnimatePresence>
           <motion.div
-            className="w-2/3 md:w-2/5  flex md:flex-row flex-col"
+            className="w-[85%] md:w-2/5  flex md:flex-row flex-col"
             initial="hidden"
             animate="visible"
             viewport={{ once: true }}
@@ -78,22 +78,20 @@ const Shop = () => {
               />
             </motion.div>
             <motion.div
-              className="w-full sm:p-10 md:p-16 flex flex-row items-center gap-3 md:flex-col md:items-stretch md:gap-2 mt-5 md:mt-0 justify-between md:justify-center"
+              className="w-full sm:p-10 md:p-16 flex flex-col md:gap-2 mt-5 md:mt-0 justify-center"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 1.5 }}
             >
-              <div className="min-w-0 flex flex-col md:gap-2">
-                <h2 className="w-full font-bold text-sm md:text-xl">
-                  {lang.buy_cd}
-                </h2>
-                <p className="w-full text-xs md:text-sm">
-                  {lang.buy_cd_contact}
-                </p>
-              </div>
+              <h2 className="w-full font-bold text-sm md:text-xl">
+                {lang.buy_cd}
+              </h2>
+              <p className="w-full text-xs md:text-sm">
+                {lang.buy_cd_contact}
+              </p>
               <motion.button
-                className="shrink-0 w-28 md:w-40 border-[1px] border-white rounded-full font-semibold text-xs md:text-sm h-8 py-2 md:h-12 md:mt-3 hover:border-[#d50006] hover:bg-[#d50006] transition duration-200"
+                className="w-28 md:w-40 border-[1px] border-white rounded-full font-semibold text-xs md:text-sm h-8 py-2 md:h-12 mt-3 hover:border-[#d50006] hover:bg-[#d50006] transition duration-200"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 2 }}
