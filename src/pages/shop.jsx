@@ -47,10 +47,10 @@ const Shop = () => {
         ></motion.div>
         )
         <StaticImage
-          src="../assets/pictures/4629.jpg"
+          src="../assets/pictures/2550.jpg"
           alt="background shop page colours of tango"
           className="fixed top-0 left-0 h-screen"
-          objectPosition="48% 50%"
+          objectPosition="38% 60%"
           objectFit="cover"
         />
       </div>
