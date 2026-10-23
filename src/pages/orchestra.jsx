@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import Loader from "../components/Loader";
 import { motion } from "framer-motion";
@@ -13,6 +13,7 @@ import { lang_PL } from "../data/lang-pack";
 import { FaArrowRight } from "react-icons/fa";
 // HOOKS
 import useMediaQuery from "../hooks/useMediaQuery";
+import useLocomotiveScroll from "../hooks/useLocomotiveScroll";
 import { Link } from "gatsby";
 
 const Orchestra = () => {
@@ -21,12 +22,7 @@ const Orchestra = () => {
   const lang = language === "PL" ? lang_EN : lang_PL;
   const [showModal, setShowModal] = useState(false);
 
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-  }, []);
+  useLocomotiveScroll();
 
   //Title Animation
   const cot_orchestra_en = [

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 //COMPONENTS
@@ -6,6 +6,7 @@ import Head from "../components/Head";
 
 // HOOKS
 import useMediaQuery from "../hooks/useMediaQuery";
+import useLocomotiveScroll from "../hooks/useLocomotiveScroll";
 
 //LIBS
 import { motion } from "framer-motion";
@@ -19,12 +20,7 @@ import Loader from "../components/Loader";
 // import Loader from "../components/Loader";
 
 const Video = () => {
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-  }, []);
+  useLocomotiveScroll();
 
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [showModal, setShowModal] = useState(false);

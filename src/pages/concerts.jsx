@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { motion } from "framer-motion";
 
@@ -9,18 +9,14 @@ import ConcertList from "../components/ConcertItem";
 
 // HOOKS
 import useMediaQuery from "../hooks/useMediaQuery";
+import useLocomotiveScroll from "../hooks/useLocomotiveScroll";
 
 // STATE
 import { useRecoilState } from "recoil";
 import { languageState } from "../atoms/atom";
 
 const Concerts = () => {
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      new LocomotiveScroll();
-    })();
-  }, []);
+  useLocomotiveScroll();
 
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [language] = useRecoilState(languageState);

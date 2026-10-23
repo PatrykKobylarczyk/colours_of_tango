@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { graphql } from "gatsby";
 //LIBS'
@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 // HOOKS
 import useMediaQuery from "../hooks/useMediaQuery";
+import useLocomotiveScroll from "../hooks/useLocomotiveScroll";
 
 //COMPONENTS
 import GalleryRow from "../components/GalleryRow";
@@ -18,12 +19,7 @@ import { useRecoilState } from "recoil";
 import { languageState } from "../atoms/atom";
 
 const Gallery = ({ data }) => {
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      const locomotiveScroll = new LocomotiveScroll();
-    })();
-  }, []);
+  useLocomotiveScroll();
 
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [showModal, setShowModal] = useState(false);
