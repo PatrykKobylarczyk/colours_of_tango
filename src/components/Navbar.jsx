@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 
 //LIBS
 import { motion, AnimatePresence } from "framer-motion";
-import { Squeeze as Hamburger } from "hamburger-react";
 
 //HOOKS
 import useMediaQuery from "../hooks/useMediaQuery";
@@ -115,12 +114,33 @@ const Navbar = () => {
             </motion.div>
           </motion.div>
         ) : (
-          <Hamburger
-            toggled={isMenuToggled}
-            toggle={() => setIsMenuToggled((prev) => !prev)}
-            size={17}
-            color="white"
-          />
+          // Only one icon is rendered at a time, so the burger and the
+          // close cross can never overlap.
+          <button
+            type="button"
+            className="w-12 h-12 flex items-center justify-center text-white"
+            aria-label={isMenuToggled ? "Zamknij menu" : "Otwórz menu"}
+            aria-expanded={isMenuToggled}
+            onClick={() => setIsMenuToggled((prev) => !prev)}
+          >
+            {isMenuToggled ? (
+              <svg width="17" height="17" viewBox="0 0 17 17" aria-hidden="true">
+                <path
+                  d="M1 1L16 16M16 1L1 16"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                />
+              </svg>
+            ) : (
+              <svg width="17" height="8" viewBox="0 0 17 8" aria-hidden="true">
+                <path
+                  d="M0 0.75H17M0 7.25H17"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                />
+              </svg>
+            )}
+          </button>
         )}
       </header>
       {/* MOBILE MENU POPUP */}
