@@ -18,12 +18,10 @@ const GalleryRow = ({ setShowModal, data, handleImageModal }) => {
         <motion.div
           key={i}
           variants={item}
-          onClick={() =>
-            handleImageModal(image.node.childImageSharp.gatsbyImageData, i)
-          }
+          onClick={() => handleImageModal(image.node.childImageSharp.full, i)}
         >
           <Thumbnail
-            image={image.node.childImageSharp.gatsbyImageData}
+            image={image.node.childImageSharp.thumb}
             setShowModal={setShowModal}
           />
         </motion.div>

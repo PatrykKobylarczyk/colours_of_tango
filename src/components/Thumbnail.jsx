@@ -14,6 +14,7 @@ const Thumbnail = ({ image, setShowModal }) => {
         image={image}
         alt="Duo milonga"
         className="h-full"
+        sizes="(min-width: 640px) 25vw, 34vw"
         imgStyle={{
           objectFit: "cover",
           objectPosition: "50% 20%",
