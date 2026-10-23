@@ -78,20 +78,22 @@ const Shop = () => {
               />
             </motion.div>
             <motion.div
-              className="w-full sm:p-10 md:p-16 flex flex-col md:gap-2 mt-5 md:mt-0 justify-center"
+              className="w-full sm:p-10 md:p-16 flex flex-row items-center gap-3 md:flex-col md:items-stretch md:gap-2 mt-5 md:mt-0 justify-between md:justify-center"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 1.5 }}
             >
-              <h2 className="w-full font-bold text-sm md:text-xl">
-                {lang.buy_cd}
-              </h2>
-              <p className="w-full text-xs md:text-sm">
-                {lang.buy_cd_contact}
-              </p>
+              <div className="min-w-0 flex flex-col md:gap-2">
+                <h2 className="w-full font-bold text-sm md:text-xl">
+                  {lang.buy_cd}
+                </h2>
+                <p className="w-full text-xs md:text-sm">
+                  {lang.buy_cd_contact}
+                </p>
+              </div>
               <motion.button
-                className="w-28 md:w-40 border-[1px] border-white rounded-full font-semibold text-xs md:text-sm h-8 py-2 md:h-12 mt-3 hover:border-[#d50006] hover:bg-[#d50006] transition duration-200"
+                className="shrink-0 w-28 md:w-40 border-[1px] border-white rounded-full font-semibold text-xs md:text-sm h-8 py-2 md:h-12 md:mt-3 hover:border-[#d50006] hover:bg-[#d50006] transition duration-200"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: 2 }}
