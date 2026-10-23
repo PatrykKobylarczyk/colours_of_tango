@@ -14,7 +14,6 @@ import { languageState, musicInFooter, musicInPlayer } from "../atoms/atom";
 
 // DATA
 import audio from "../assets/audio/El_choclo.mp3";
-import { useCallback } from "react";
 
 const Footer = () => {
   const audioRef = useRef(null);
@@ -44,23 +43,6 @@ const Footer = () => {
       audioRef.current.pause();
     }
   }, [isMusicInFooter]);
-
-  // Set initial language state because from local storage returns null
-  const setLanguageState = useCallback(() => {
-    if (!language) {
-      setLanguage("PL");
-    }
-  }, [language, setLanguage]);
-
-  useEffect(() => {
-    setLanguageState();
-  }, [setLanguageState]);
-
-  const setLanguageInLocalStorage = useCallback(() => {
-    localStorage.setItem("language", JSON.stringify(language));
-  }, [language]);
-
-  useEffect(() => setLanguageInLocalStorage(), [setLanguageInLocalStorage]);
 
   return (
     <footer>

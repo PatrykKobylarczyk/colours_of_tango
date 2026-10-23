@@ -3,7 +3,9 @@ import { musicData } from "../data/musicData";
 
 export const languageState = atom({
   key: "language",
-  default: typeof window !== "undefined" && JSON.parse(localStorage.getItem("language")),
+  // Holds the label of the language switch button, so "EN" means Polish content is shown.
+  // Always start in Polish, regardless of any previously chosen language.
+  default: "EN",
 });
 
 export const mediumClicked = atom({
