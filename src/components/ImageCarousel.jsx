@@ -15,20 +15,30 @@ import useMediaQuery from "../hooks/useMediaQuery";
 
 const ImageCarousel = ({ setShowModal, currentIndex, data }) => {
   const slider = React.useRef(null);
+  const [activeIndex, setActiveIndex] = React.useState(currentIndex);
+  const count = data.allFile.edges.length;
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)");
 
-  const displayCarouselSection = data.allFile.edges.map((image) => (
-    <div className="w-full h-screen flex justify-center align-center">
-      <GatsbyImage
-        key={image.id}
-        image={image.node.childImageSharp.gatsbyImageData}
-        alt={"Duo milonga"}
-        className="w-full h-full"
-        imgStyle={{
-          objectFit: "contain",
-          objectPosition: "50% 50%",
-        }}
-      />
+  // Only the current photo and its neighbours are mounted. Keeping every
+  // full-size photo in memory crashed the gallery on iPhones.
+  const isNearActive = (i) => {
+    const distance = Math.abs(i - activeIndex);
+    return Math.min(distance, count - distance) <= 1;
+  };
+
+  const displayCarouselSection = data.allFile.edges.map((image, i) => (
+    <div key={i} className="w-full h-screen flex justify-center align-center">
+      {isNearActive(i) && (
+        <GatsbyImage
+          image={image.node.childImageSharp.full}
+          alt={"Duo milonga"}
+          className="w-full h-full"
+          imgStyle={{
+            objectFit: "contain",
+            objectPosition: "50% 50%",
+          }}
+        />
+      )}
     </div>
   ));
 
@@ -40,6 +50,7 @@ const ImageCarousel = ({ setShowModal, currentIndex, data }) => {
     initialSlide: currentIndex,
     arrows: false,
     adaptiveHeight: true,
+    beforeChange: (_, next) => setActiveIndex(next),
   };
 
   return (

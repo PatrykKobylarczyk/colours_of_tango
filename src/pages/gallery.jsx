@@ -135,9 +135,17 @@ export const query = graphql`
       edges {
         node {
           childImageSharp {
-            gatsbyImageData(
+            # Small images for the grid and a capped size for the full-screen
+            # viewer: full-resolution photos crashed the page on iPhones.
+            thumb: gatsbyImageData(
+              width: 600
               blurredOptions: { width: 200 }
               placeholder: BLURRED
+              transformOptions: { cropFocus: CENTER }
+            )
+            full: gatsbyImageData(
+              width: 2000
+              placeholder: NONE
               transformOptions: { cropFocus: CENTER }
             )
           }
